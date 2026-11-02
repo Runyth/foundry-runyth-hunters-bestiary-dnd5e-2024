@@ -1,6 +1,6 @@
-# Hunter's Bestiary - D&D 5e 2024 API
+# Runyth Hunter's Bestiary - D&D 5e 2024 API
 
-Release: 1.1.1. Public APIs are exposed through `game.modules.get("hunters-bestiary-dnd5e-2024").api`; no new global namespace is required. Existing compatibility surfaces are retained for this feature release.
+Release: 1.1.1. Public APIs are exposed through `game.modules.get("runyth-hunters-bestiary-dnd5e-2024").api`; no new global namespace is required. Existing compatibility surfaces are retained for this feature release.
 
 ## Shared core dependency
 
@@ -21,7 +21,7 @@ After `await api.whenReady()`:
 - `getIntegrationStatus()`
 - `open()` (GM-only)
 
-The module consumes `core.ui`, registers `type: "system-layer"`, and publishes provider ID `hunters-bestiary-dnd5e-2024`.
+The module consumes `core.ui`, registers `type: "system-layer"`, and publishes provider ID `runyth-hunters-bestiary-dnd5e-2024`.
 
 ## Initialization, registration, and rollback
 

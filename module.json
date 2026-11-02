@@ -1,6 +1,6 @@
 {
-  "id": "hunters-bestiary-dnd5e-2024",
-  "title": "Hunter's Bestiary - D&D 5e 2024",
+  "id": "runyth-hunters-bestiary-dnd5e-2024",
+  "title": "Runyth Hunter's Bestiary - D&D 5e 2024",
   "description": "D&D 5e 2024 system integration for Hunter's Bestiary: original NPC Actors, native D20 field checks, harvest Items, encounter profiles, and an API for complementary D&D monster packs.",
   "version": "1.2.2",
   "authors": [
@@ -16,7 +16,7 @@
   "relationships": {
     "requires": [
       {
-        "id": "hunters-bestiary",
+        "id": "runyth-hunters-bestiary",
         "type": "module",
         "compatibility": {
           "minimum": "1.4.2"
@@ -37,7 +37,7 @@
     "main.mjs"
   ],
   "styles": [
-    "styles/hunters-bestiary-dnd5e.css"
+    "styles/runyth-hunters-bestiary-dnd5e.css"
   ],
   "languages": [
     {

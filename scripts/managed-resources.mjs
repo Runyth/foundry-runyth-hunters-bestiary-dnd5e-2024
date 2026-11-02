@@ -1,18 +1,18 @@
 import { CORE_MODULE_ID, MODULE_ID, SETTINGS } from "./constants.mjs";
 
-export const CANONICAL_ACTOR_FOLDER_NAME = "Hunter's Bestiary - D&D 5e 2024: Quarry Actors";
-export const CANONICAL_HARVEST_FOLDER_NAME = "Hunter's Bestiary - D&D 5e 2024: Harvest Items";
+export const CANONICAL_ACTOR_FOLDER_NAME = "Runyth Hunter's Bestiary - D&D 5e 2024: Quarry Actors";
+export const CANONICAL_HARVEST_FOLDER_NAME = "Runyth Hunter's Bestiary - D&D 5e 2024: Harvest Items";
 
 export const LEGACY_ACTOR_FOLDER_NAMES = Object.freeze([
-  "Hunter's Bestiary — D&D 5e Quarry Actors",
-  "Hunter's Bestiary — Quarry Actors",
-  "Hunter's Bestiary: Quarry Actors"
+  "Runyth Hunter's Bestiary — D&D 5e Quarry Actors",
+  "Runyth Hunter's Bestiary — Quarry Actors",
+  "Runyth Hunter's Bestiary: Quarry Actors"
 ]);
 
 export const LEGACY_HARVEST_FOLDER_NAMES = Object.freeze([
-  "Hunter's Bestiary — D&D 5e Harvest Items",
-  "Hunter's Bestiary — Harvest Items",
-  "Hunter's Bestiary: Harvest Items"
+  "Runyth Hunter's Bestiary — D&D 5e Harvest Items",
+  "Runyth Hunter's Bestiary — Harvest Items",
+  "Runyth Hunter's Bestiary: Harvest Items"
 ]);
 
 function flag(document, moduleId, key) {
@@ -49,7 +49,7 @@ export function getImportedResourceSummary() {
 }
 
 export async function reconcileManagedFolders() {
-  if (!globalThis.game?.user?.isGM) throw new Error("Only a GM may repair imported Hunter's Bestiary folders.");
+  if (!globalThis.game?.user?.isGM) throw new Error("Only a GM may repair imported Runyth Hunter's Bestiary folders.");
 
   const configuredActorFolder = game.settings.get(MODULE_ID, SETTINGS.ACTOR_FOLDER);
   const configuredHarvestFolder = game.settings.get(MODULE_ID, SETTINGS.HARVEST_FOLDER);
@@ -172,7 +172,7 @@ function isFolderEmpty(folder, type) {
 }
 
 export async function deleteImportedResources({ coreApi, onProgress = null } = {}) {
-  if (!globalThis.game?.user?.isGM) throw new Error("Only a GM may delete imported Hunter's Bestiary resources.");
+  if (!globalThis.game?.user?.isGM) throw new Error("Only a GM may delete imported Runyth Hunter's Bestiary resources.");
   const actors = game.actors?.contents?.filter(isManagedQuarryActor) ?? [];
   const items = game.items?.contents?.filter(isManagedHarvestItem) ?? [];
   const candidateFolders = new Map();

@@ -1,7 +1,7 @@
-hunters-bestiary-dnd5e-2024 1.2.2 automated validation
+runyth-hunters-bestiary-dnd5e-2024 1.2.2 automated validation
 
 
-> hunters-bestiary-dnd5e-2024@1.2.2 test
+> runyth-hunters-bestiary-dnd5e-2024@1.2.2 test
 > node --test tests/*.test.mjs
 
 TAP version 13
@@ -77,7 +77,7 @@ ok 12 - official system layer registers canonical naming metadata and validates 
   duration_ms: 0.915724
   type: 'test'
   ...
-# hunters-bestiary-dnd5e-2024 | Bulk harvest Item operation failed; retrying individually Error: Bulk operation unavailable.
+# runyth-hunters-bestiary-dnd5e-2024 | Bulk harvest Item operation failed; retrying individually Error: Bulk operation unavailable.
 #     at executeBatchWithFallback (file://scripts/harvest-import.mjs:97:22)
 #     at importOrUpdateHarvestItemsBatch (file://scripts/harvest-import.mjs:75:9)
 # Subtest: harvest import updates existing managed Items and creates only missing Items
@@ -212,7 +212,7 @@ ok 34 - a rejected replacement leaves the previous provider records intact
   duration_ms: 0.676531
   type: 'test'
   ...
-# hunters-bestiary-dnd5e-2024 | Initialized.
+# runyth-hunters-bestiary-dnd5e-2024 | Initialized.
 # Subtest: bundled init hook always registers global settings and exposes the API
 ok 35 - bundled init hook always registers global settings and exposes the API
   ---
@@ -260,7 +260,7 @@ ok 40 - provider replacement removes stale stat blocks
 # duration_ms 308.23088
 
 
-> hunters-bestiary-dnd5e-2024@1.2.2 check
+> runyth-hunters-bestiary-dnd5e-2024@1.2.2 check
 > node tools/check.mjs
 
 D&D 5e integration validation passed (11 groups):

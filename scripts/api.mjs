@@ -116,7 +116,7 @@ export class HuntersBestiaryDnd5eAPI {
   }
 
   async registerMonsterPack(providerId, { monsterBundles = [], statblocks = [] } = {}, options = {}) {
-    if (!game.user.isGM) throw new Error("Only a GM may register a D&D 5e Hunter's Bestiary monster pack.");
+    if (!game.user.isGM) throw new Error("Only a GM may register a D&D 5e Runyth Hunter's Bestiary monster pack.");
     const source = slugify(providerId);
     if (!source) throw new Error("A provider id is required.");
     const previous = this.#registry.providerRecords(source);

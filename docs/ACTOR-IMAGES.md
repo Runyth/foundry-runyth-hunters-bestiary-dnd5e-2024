@@ -6,7 +6,7 @@ This module uses the Hunter’s Bestiary core image service. A monster has one e
 
 The twenty-four base D&D stat blocks correspond to the core monsters in `hunters-bestiary/data/seed.json`. To pre-pack custom artwork:
 
-1. Put image files below `hunters-bestiary/assets/actors/`.
+1. Put image files below `runyth-hunters-bestiary/assets/actors/`.
 2. Update each matching core monster’s `img` field to the module-relative path.
 3. Build Hunter’s Bestiary first, then this module.
 

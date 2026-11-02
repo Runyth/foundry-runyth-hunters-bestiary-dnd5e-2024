@@ -4,10 +4,10 @@
 const __hbModules = Object.create(null);
 
 __hbModules["scripts/constants.mjs"] = (() => {
-  const MODULE_ID = "hunters-bestiary-dnd5e-2024";
-  const MODULE_TITLE = "Hunter's Bestiary - D&D 5e 2024";
+  const MODULE_ID = "runyth-hunters-bestiary-dnd5e-2024";
+  const MODULE_TITLE = "Runyth Hunter's Bestiary - D&D 5e 2024";
   const MODULE_VERSION = "1.2.2";
-  const CORE_MODULE_ID = "hunters-bestiary";
+  const CORE_MODULE_ID = "runyth-hunters-bestiary";
   const SYSTEM_ID = "dnd5e";
   const ADAPTER_ID = MODULE_ID;
   
@@ -366,7 +366,7 @@ __hbModules["scripts/dnd5e-builder.mjs"] = (() => {
           legres: { max: 0, spent: 0 },
           lair: { value: false, initiative: null, inside: false }
         },
-        source: { revision: 1, rules: "2024", book: "Hunter's Bestiary", license: "Original Content" },
+        source: { revision: 1, rules: "2024", book: "Runyth Hunter's Bestiary", license: "Original Content" },
         traits: {
           size,
           di: { value: clone(statblock.damageImmunities ?? []), custom: "", bypasses: [] },
@@ -410,7 +410,7 @@ __hbModules["scripts/dnd5e-builder.mjs"] = (() => {
       img: resolveHarvestIcon(part),
       system: {
         description: { value: `<p>${escapeForRichText(localizeText(part.description))}</p><p><strong>${escapeForRichText(localizeText("HBDND5E.Fields.Quarry"))}:</strong> ${escapeForRichText(localizeText(monster.name))}</p>`, chat: "" },
-        source: { revision: 1, rules: "2024", book: "Hunter's Bestiary", license: "Original Content" },
+        source: { revision: 1, rules: "2024", book: "Runyth Hunter's Bestiary", license: "Original Content" },
         identified: true,
         quantity: Number(part.quantity ?? 1),
         weight: Number(part.weight ?? 0),
@@ -492,7 +492,7 @@ __hbModules["scripts/dnd5e-builder.mjs"] = (() => {
       img: "icons/skills/wounds/anatomy-organ-heart-red.webp",
       system: {
         description: { value: `<p>${escapeForRichText(localizeText(trait.description))}</p>`, chat: "" },
-        source: { revision: 1, rules: "2024", book: "Hunter's Bestiary", license: "Original Content" },
+        source: { revision: 1, rules: "2024", book: "Runyth Hunter's Bestiary", license: "Original Content" },
         type: { value: "monster", subtype: "" },
         properties: [],
         activities: {},
@@ -513,7 +513,7 @@ __hbModules["scripts/dnd5e-builder.mjs"] = (() => {
       img: attackType === "ranged" ? "icons/magic/fire/projectile-fireball-smoke-orange.webp" : "icons/skills/melee/claw-slashes-orange.webp",
       system: {
         description: { value: `<p>${escapeForRichText(localizeText(action.description))}</p>`, chat: "" },
-        source: { revision: 1, rules: "2024", book: "Hunter's Bestiary", license: "Original Content" },
+        source: { revision: 1, rules: "2024", book: "Runyth Hunter's Bestiary", license: "Original Content" },
         identified: true,
         quantity: 1,
         weight: 0,
@@ -619,19 +619,19 @@ __hbModules["scripts/dnd5e-builder.mjs"] = (() => {
 
 __hbModules["scripts/managed-resources.mjs"] = (() => {
   const { CORE_MODULE_ID, MODULE_ID, SETTINGS } = __hbModules["scripts/constants.mjs"];
-  const CANONICAL_ACTOR_FOLDER_NAME = "Hunter's Bestiary - D&D 5e 2024: Quarry Actors";
-  const CANONICAL_HARVEST_FOLDER_NAME = "Hunter's Bestiary - D&D 5e 2024: Harvest Items";
+  const CANONICAL_ACTOR_FOLDER_NAME = "Runyth Hunter's Bestiary - D&D 5e 2024: Quarry Actors";
+  const CANONICAL_HARVEST_FOLDER_NAME = "Runyth Hunter's Bestiary - D&D 5e 2024: Harvest Items";
   
   const LEGACY_ACTOR_FOLDER_NAMES = Object.freeze([
-    "Hunter's Bestiary — D&D 5e Quarry Actors",
-    "Hunter's Bestiary — Quarry Actors",
-    "Hunter's Bestiary: Quarry Actors"
+    "Runyth Hunter's Bestiary — D&D 5e Quarry Actors",
+    "Runyth Hunter's Bestiary — Quarry Actors",
+    "Runyth Hunter's Bestiary: Quarry Actors"
   ]);
   
   const LEGACY_HARVEST_FOLDER_NAMES = Object.freeze([
-    "Hunter's Bestiary — D&D 5e Harvest Items",
-    "Hunter's Bestiary — Harvest Items",
-    "Hunter's Bestiary: Harvest Items"
+    "Runyth Hunter's Bestiary — D&D 5e Harvest Items",
+    "Runyth Hunter's Bestiary — Harvest Items",
+    "Runyth Hunter's Bestiary: Harvest Items"
   ]);
   
   function flag(document, moduleId, key) {
@@ -668,7 +668,7 @@ __hbModules["scripts/managed-resources.mjs"] = (() => {
   }
   
   async function reconcileManagedFolders() {
-    if (!globalThis.game?.user?.isGM) throw new Error("Only a GM may repair imported Hunter's Bestiary folders.");
+    if (!globalThis.game?.user?.isGM) throw new Error("Only a GM may repair imported Runyth Hunter's Bestiary folders.");
   
     const configuredActorFolder = game.settings.get(MODULE_ID, SETTINGS.ACTOR_FOLDER);
     const configuredHarvestFolder = game.settings.get(MODULE_ID, SETTINGS.HARVEST_FOLDER);
@@ -791,7 +791,7 @@ __hbModules["scripts/managed-resources.mjs"] = (() => {
   }
   
   async function deleteImportedResources({ coreApi, onProgress = null } = {}) {
-    if (!globalThis.game?.user?.isGM) throw new Error("Only a GM may delete imported Hunter's Bestiary resources.");
+    if (!globalThis.game?.user?.isGM) throw new Error("Only a GM may delete imported Runyth Hunter's Bestiary resources.");
     const actors = game.actors?.contents?.filter(isManagedQuarryActor) ?? [];
     const items = game.items?.contents?.filter(isManagedHarvestItem) ?? [];
     const candidateFolders = new Map();
@@ -874,7 +874,7 @@ __hbModules["scripts/harvest-import.mjs"] = (() => {
   }
   
   async function importOrUpdateHarvestItemsBatch({ entries = [], folderName, onProgress } = {}) {
-    if (!globalThis.game?.user?.isGM) throw new Error("Only a GM may import Hunter's Bestiary harvest Items.");
+    if (!globalThis.game?.user?.isGM) throw new Error("Only a GM may import Runyth Hunter's Bestiary harvest Items.");
     const ItemClass = globalThis.CONFIG?.Item?.documentClass ?? globalThis.Item;
     if (!ItemClass?.createDocuments) throw new Error("Foundry Item document class is unavailable.");
   
@@ -1157,7 +1157,7 @@ __hbModules["scripts/api.mjs"] = (() => {
     }
   
     async registerMonsterPack(providerId, { monsterBundles = [], statblocks = [] } = {}, options = {}) {
-      if (!game.user.isGM) throw new Error("Only a GM may register a D&D 5e Hunter's Bestiary monster pack.");
+      if (!game.user.isGM) throw new Error("Only a GM may register a D&D 5e Runyth Hunter's Bestiary monster pack.");
       const source = slugify(providerId);
       if (!source) throw new Error("A provider id is required.");
       const previous = this.#registry.providerRecords(source);
@@ -1289,7 +1289,7 @@ __hbModules["scripts/apps/reset-menus.mjs"] = (() => {
   
   function coreUi() {
     const toolkit = globalThis.game?.modules?.get?.(CORE_MODULE_ID)?.api?.ui;
-    if (!toolkit) throw new Error("Hunter's Bestiary dashboard API is unavailable.");
+    if (!toolkit) throw new Error("Runyth Hunter's Bestiary dashboard API is unavailable.");
     return toolkit;
   }
   
@@ -1357,8 +1357,8 @@ __hbModules["scripts/settings.mjs"] = (() => {
     registerBoolean(SETTINGS.SHOW_ONBOARDING, true);
     registerBoolean(SETTINGS.ALLOW_INCOMPLETE_PACKS, false);
   
-    registerString(SETTINGS.ACTOR_FOLDER, "Hunter's Bestiary - D&D 5e 2024: Quarry Actors");
-    registerString(SETTINGS.HARVEST_FOLDER, "Hunter's Bestiary - D&D 5e 2024: Harvest Items");
+    registerString(SETTINGS.ACTOR_FOLDER, "Runyth Hunter's Bestiary - D&D 5e 2024: Quarry Actors");
+    registerString(SETTINGS.HARVEST_FOLDER, "Runyth Hunter's Bestiary - D&D 5e 2024: Harvest Items");
   
     game.settings.register(MODULE_ID, SETTINGS.WINDOW_STATES, {
       scope: "client",
@@ -1411,10 +1411,10 @@ __hbModules["scripts/apps/base-app.mjs"] = (() => {
   
   function getCoreUi() {
     const ui = game.modules.get(CORE_MODULE_ID)?.api?.ui;
-    if (!ui) throw new Error("Hunter's Bestiary dashboard API is unavailable. Enable Hunter's Bestiary 1.3.2 or newer.");
+    if (!ui) throw new Error("Runyth Hunter's Bestiary dashboard API is unavailable. Enable Runyth Hunter's Bestiary 1.3.2 or newer.");
     const supportedMajor = Number(String(ui.version).split(".")[0]);
     const requiredMajor = Number(REQUIRED_DASHBOARD_API.split(".")[0]);
-    if (supportedMajor < requiredMajor) throw new Error(`Hunter's Bestiary dashboard API ${REQUIRED_DASHBOARD_API} is required; installed: ${ui.version}.`);
+    if (supportedMajor < requiredMajor) throw new Error(`Runyth Hunter's Bestiary dashboard API ${REQUIRED_DASHBOARD_API} is required; installed: ${ui.version}.`);
     return ui;
   }
   
@@ -1526,7 +1526,7 @@ __hbModules["scripts/apps/dashboard.mjs"] = (() => {
   
   function operationHasFailures(value) {
     const detector = getCoreUi().operationHasFailures;
-    if (typeof detector !== "function") throw new Error("Hunter's Bestiary dashboard API 1.1.0 operation-result contract is unavailable.");
+    if (typeof detector !== "function") throw new Error("Runyth Hunter's Bestiary dashboard API 1.1.0 operation-result contract is unavailable.");
     return detector(value);
   }
   
@@ -1832,7 +1832,7 @@ __hbModules["scripts/apps/dashboard.mjs"] = (() => {
         return {
           id: record.monsterId,
           name,
-          image: moduleApi.core?.getMonsterImage?.(record.monsterId)?.imagePath ?? "modules/hunters-bestiary/assets/hunters-bestiary.svg",
+          image: moduleApi.core?.getMonsterImage?.(record.monsterId)?.imagePath ?? "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg",
           cr: record.cr,
           role: record.encounter?.role ?? "standard",
           actorLinked: Boolean(monster?.actorUuid),
@@ -1953,9 +1953,9 @@ __hbModules["scripts/main.mjs"] = (() => {
     try {
       if (game.system.id !== SYSTEM_ID) throw new Error(`This module requires the dnd5e system, but '${game.system.id}' is active.`);
       const core = game.modules.get(CORE_MODULE_ID);
-      if (!core?.active || !core.api) throw new Error("Hunter's Bestiary core module v1.3.2 or newer must be active.");
+      if (!core?.active || !core.api) throw new Error("Runyth Hunter's Bestiary core module v1.3.2 or newer must be active.");
       await core.api.whenReady();
-      if (core.api.initializationStatus?.ok === false) throw new Error("Hunter's Bestiary core did not initialize successfully.");
+      if (core.api.initializationStatus?.ok === false) throw new Error("Runyth Hunter's Bestiary core did not initialize successfully.");
       core.api.registerComplementaryModule({
         moduleId: MODULE_ID,
         currentTitle: game.modules.get(MODULE_ID)?.title,

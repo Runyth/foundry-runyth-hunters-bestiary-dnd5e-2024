@@ -1,7 +1,7 @@
-hunters-bestiary-dnd5e-2024 1.2.0 automated validation
+runyth-hunters-bestiary-dnd5e-2024 1.2.0 automated validation
 
 
-> hunters-bestiary-dnd5e-2024@1.2.0 test
+> runyth-hunters-bestiary-dnd5e-2024@1.2.0 test
 > node --test tests/*.test.mjs
 
 TAP version 13
@@ -179,7 +179,7 @@ ok 29 - a rejected replacement leaves the previous provider records intact
   duration_ms: 0.449987
   type: 'test'
   ...
-# hunters-bestiary-dnd5e-2024 | Initialized.
+# runyth-hunters-bestiary-dnd5e-2024 | Initialized.
 # Subtest: bundled init hook always registers global settings and exposes the API
 ok 30 - bundled init hook always registers global settings and exposes the API
   ---
@@ -227,7 +227,7 @@ ok 35 - provider replacement removes stale stat blocks
 # duration_ms 260.317377
 
 
-> hunters-bestiary-dnd5e-2024@1.2.0 check
+> runyth-hunters-bestiary-dnd5e-2024@1.2.0 check
 > node tools/check.mjs
 
 D&D 5e integration validation passed (11 groups):

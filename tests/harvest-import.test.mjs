@@ -7,8 +7,8 @@ function managedItem(index, img = "old.webp") {
     documentName: "Item",
     img,
     flags: {
-      "hunters-bestiary": { source: "harvest:test-monster", monsterId: "test-monster" },
-      "hunters-bestiary-dnd5e-2024": { monsterId: "test-monster", harvestIndex: index }
+      "runyth-hunters-bestiary": { source: "harvest:test-monster", monsterId: "test-monster" },
+      "runyth-hunters-bestiary-dnd5e-2024": { monsterId: "test-monster", harvestIndex: index }
     },
     async update(data) { this.updated = data; this.img = data.img; }
   };
@@ -30,8 +30,8 @@ test("harvest import updates existing managed Items and creates only missing Ite
     monsterId: "test-monster",
     folderName: "Harvest",
     records: [
-      { name: "Updated", type: "loot", img: "icons/one.webp", system: {}, flags: { "hunters-bestiary-dnd5e-2024": { harvestIndex: 0 } } },
-      { name: "Created", type: "loot", img: "icons/two.webp", system: {}, flags: { "hunters-bestiary-dnd5e-2024": { harvestIndex: 1 } } }
+      { name: "Updated", type: "loot", img: "icons/one.webp", system: {}, flags: { "runyth-hunters-bestiary-dnd5e-2024": { harvestIndex: 0 } } },
+      { name: "Created", type: "loot", img: "icons/two.webp", system: {}, flags: { "runyth-hunters-bestiary-dnd5e-2024": { harvestIndex: 1 } } }
     ]
   });
   assert.equal(result.updated.length, 1);

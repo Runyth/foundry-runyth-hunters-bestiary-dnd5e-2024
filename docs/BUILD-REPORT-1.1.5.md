@@ -1,4 +1,4 @@
-# Build Report — Hunter's Bestiary - D&D 5e 2024 1.1.5
+# Build Report — Runyth Hunter's Bestiary - D&D 5e 2024 1.1.5
 
 - Bundled quarry: 24
 - Bundled harvest Item definitions: 48

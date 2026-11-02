@@ -1,4 +1,4 @@
-# Hunter's Bestiary - D&D 5e 2024 1.1.1 Release Notes
+# Runyth Hunter's Bestiary - D&D 5e 2024 1.1.1 Release Notes
 
 Released 2026-07-31. Patch release from 1.1.0.
 
@@ -10,4 +10,4 @@ Foundry v13 seals its live ApplicationPosition object to the supported position 
 
 ## Compatibility
 
-Requires Hunter's Bestiary 1.3.1 and D&D 5e 5.3.3. Stable IDs, settings, stat blocks, imported Actors, provenance flags, and APIs are unchanged.
+Requires Runyth Hunter's Bestiary 1.3.1 and D&D 5e 5.3.3. Stable IDs, settings, stat blocks, imported Actors, provenance flags, and APIs are unchanged.

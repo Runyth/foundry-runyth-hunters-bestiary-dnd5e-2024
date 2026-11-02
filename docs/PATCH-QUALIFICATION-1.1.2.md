@@ -1,4 +1,4 @@
-# Patch qualification — Hunter's Bestiary - D&D 5e 2024 1.1.2
+# Patch qualification — Runyth Hunter's Bestiary - D&D 5e 2024 1.1.2
 
 - Automated tests: 18/18 passed.
 - English/German localization parity: 70/70 keys.

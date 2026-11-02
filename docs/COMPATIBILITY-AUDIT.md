@@ -2,7 +2,7 @@
 
 ## Scope
 
-Complete production-tree audit of Hunter's Bestiary - D&D 5e 2024 v1.0.0, patched as v1.0.1 against core v1.2.1, Foundry VTT 13.351, and D&D 5e 5.3.3.
+Complete production-tree audit of Runyth Hunter's Bestiary - D&D 5e 2024 v1.0.0, patched as v1.0.1 against core v1.2.1, Foundry VTT 13.351, and D&D 5e 5.3.3.
 
 ## Issues found and corrected
 
@@ -12,7 +12,7 @@ Complete production-tree audit of Hunter's Bestiary - D&D 5e 2024 v1.0.0, patche
 | Repeated adapter/settings registration | `scripts/adapter.mjs`, `scripts/settings.mjs` | Repeated lifecycle calls could register the same adapter or settings again | Added per-core-API adapter guards and settings registration guards |
 | Embedded-document ownership | `scripts/dnd5e-builder.mjs` | Generated Traits and Actions lacked stable provider-management markers | Added core-managed flags and stable D&D provider keys to every generated embedded document |
 | Application listener lifecycle | `scripts/apps/base-app.mjs` | Repeated dashboard renders could retain listeners/timers | Added per-render abort cleanup and persistent window geometry |
-| Global CSS utilities | `styles/hunters-bestiary-dnd5e.css` | `.muted` and `.table-scroll` could affect unrelated DOM | Scoped both beneath module-owned application roots |
+| Global CSS utilities | `styles/runyth-hunters-bestiary-dnd5e.css` | `.muted` and `.table-scroll` could affect unrelated DOM | Scoped both beneath module-owned application roots |
 | Dependency and packaging | `module.json`, `README.md`, `docs/TEST-PLAN.md`, `tools/build.mjs` | Patch relies on core's managed-document and security fixes; runtime ZIP included source docs | Raised core minimum to 1.2.1 and limited install ZIP to runtime files |
 
 ## Intentionally unchanged behavior

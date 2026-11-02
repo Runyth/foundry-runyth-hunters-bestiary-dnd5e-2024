@@ -1,4 +1,4 @@
-Hunter's Bestiary - D&D 5e 2024 1.1.2 automated validation
+Runyth Hunter's Bestiary - D&D 5e 2024 1.1.2 automated validation
 
 PASS: 18/18 Node test cases
 PASS: 9 validation groups

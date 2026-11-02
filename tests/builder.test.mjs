@@ -25,8 +25,8 @@ test("Actor builder emits a D&D 5e 2024 NPC with usable embedded activities", ()
   const weapon = actor.items.find(item => item.type === "weapon");
   assert.ok(weapon);
   assert.equal(Object.values(weapon.system.activities)[0].type, "attack");
-  assert.ok(actor.items.every(item => item.flags?.["hunters-bestiary"]?.managedEmbedded === true));
-  assert.ok(actor.items.every(item => item.flags?.["hunters-bestiary-dnd5e-2024"]?.managedKey));
+  assert.ok(actor.items.every(item => item.flags?.["runyth-hunters-bestiary"]?.managedEmbedded === true));
+  assert.ok(actor.items.every(item => item.flags?.["runyth-hunters-bestiary-dnd5e-2024"]?.managedKey));
 });
 
 test("harvest builder emits priced D&D loot Items", () => {
@@ -34,7 +34,7 @@ test("harvest builder emits priced D&D loot Items", () => {
   assert.equal(items.length, 2);
   assert.equal(items[0].type, "loot");
   assert.equal(items[0].system.price.denomination, "gp");
-  assert.equal(items[0].flags["hunters-bestiary-dnd5e-2024"].monsterId, monster.id);
+  assert.equal(items[0].flags["runyth-hunters-bestiary-dnd5e-2024"].monsterId, monster.id);
 });
 
 test("encounter profiles expose CR, XP, role, and count", () => {

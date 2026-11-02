@@ -28,7 +28,7 @@ export function findProgressDialog(existingInstances, expectedTitle = "") {
 
 export function operationHasFailures(value) {
   const detector = getCoreUi().operationHasFailures;
-  if (typeof detector !== "function") throw new Error("Hunter's Bestiary dashboard API 1.1.0 operation-result contract is unavailable.");
+  if (typeof detector !== "function") throw new Error("Runyth Hunter's Bestiary dashboard API 1.1.0 operation-result contract is unavailable.");
   return detector(value);
 }
 
@@ -334,7 +334,7 @@ export class DashboardApp extends PersistentApplication {
       return {
         id: record.monsterId,
         name,
-        image: moduleApi.core?.getMonsterImage?.(record.monsterId)?.imagePath ?? "modules/hunters-bestiary/assets/hunters-bestiary.svg",
+        image: moduleApi.core?.getMonsterImage?.(record.monsterId)?.imagePath ?? "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg",
         cr: record.cr,
         role: record.encounter?.role ?? "standard",
         actorLinked: Boolean(monster?.actorUuid),

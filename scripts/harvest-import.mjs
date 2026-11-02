@@ -21,7 +21,7 @@ export async function importOrUpdateHarvestItems({ monsterId, records, folderNam
 }
 
 export async function importOrUpdateHarvestItemsBatch({ entries = [], folderName, onProgress } = {}) {
-  if (!globalThis.game?.user?.isGM) throw new Error("Only a GM may import Hunter's Bestiary harvest Items.");
+  if (!globalThis.game?.user?.isGM) throw new Error("Only a GM may import Runyth Hunter's Bestiary harvest Items.");
   const ItemClass = globalThis.CONFIG?.Item?.documentClass ?? globalThis.Item;
   if (!ItemClass?.createDocuments) throw new Error("Foundry Item document class is unavailable.");
 

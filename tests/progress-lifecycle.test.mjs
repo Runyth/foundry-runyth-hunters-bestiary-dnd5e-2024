@@ -43,7 +43,7 @@ test("successful progress windows are foregrounded and closed automatically", as
     releaseProgressDialog: value => tracked.delete(value)
   };
   globalThis.foundry.applications.instances = new Map();
-  globalThis.game = { modules: new Map([["hunters-bestiary", { api: { ui: {
+  globalThis.game = { modules: new Map([["runyth-hunters-bestiary", { api: { ui: {
     version: "1.0.0",
     operationHasFailures: explicitFailureDetector,
     runProgressOperation: async ({ runner }) => {
@@ -76,7 +76,7 @@ test("failed progress windows remain visible until their dashboard closes", asyn
     releaseProgressDialog: value => tracked.delete(value)
   };
   globalThis.foundry.applications.instances = new Map();
-  globalThis.game = { modules: new Map([["hunters-bestiary", { api: { ui: {
+  globalThis.game = { modules: new Map([["runyth-hunters-bestiary", { api: { ui: {
     version: "1.0.0",
     operationHasFailures: explicitFailureDetector,
     runProgressOperation: async ({ runner }) => {
@@ -111,7 +111,7 @@ test("partial result failures keep the progress window open", async () => {
   const tracked = new Set();
   const app = { element: {}, trackProgressDialog: value => tracked.add(value), releaseProgressDialog: value => tracked.delete(value) };
   globalThis.foundry.applications.instances = new Map();
-  globalThis.game = { modules: new Map([["hunters-bestiary", { api: { ui: {
+  globalThis.game = { modules: new Map([["runyth-hunters-bestiary", { api: { ui: {
     version: "1.0.0",
     operationHasFailures: explicitFailureDetector,
     runProgressOperation: async ({ runner }) => {

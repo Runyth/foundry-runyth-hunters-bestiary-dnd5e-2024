@@ -17,7 +17,7 @@ function document({ id, name, documentName, folder, core = {}, dnd = {} }) {
     uuid: `${documentName}.${id}`,
     documentName,
     folder,
-    flags: { "hunters-bestiary": core, "hunters-bestiary-dnd5e-2024": dnd },
+    flags: { "runyth-hunters-bestiary": core, "runyth-hunters-bestiary-dnd5e-2024": dnd },
     getFlag(moduleId, key) { return this.flags[moduleId]?.[key]; },
     async update(data) { if (Object.hasOwn(data, "folder")) this.folder = data.folder; Object.assign(this, data); },
     async delete() { this.deleted = true; }
@@ -41,7 +41,7 @@ function folder({ id, name, type }) {
 function installGame({ actors = [], items = [], folders = [], actorSetting = CANONICAL_ACTOR_FOLDER_NAME }) {
   const settings = new Map([
     ["actorFolderName", actorSetting],
-    ["harvestFolderName", "Hunter's Bestiary - D&D 5e 2024: Harvest Items"]
+    ["harvestFolderName", "Runyth Hunter's Bestiary - D&D 5e 2024: Harvest Items"]
   ]);
   globalThis.game = {
     user: { isGM: true },
@@ -66,8 +66,8 @@ test("managed resource predicates require exact dual provenance", () => {
   const item = document({ id: "i", name: "I", documentName: "Item", folder: null, core: { source: "harvest:m" }, dnd: { monsterId: "m" } });
   assert.equal(isManagedQuarryActor(actor), true);
   assert.equal(isManagedHarvestItem(item), true);
-  assert.equal(isManagedQuarryActor({ ...actor, flags: { "hunters-bestiary": { monsterId: "m" } } }), false);
-  assert.equal(isManagedHarvestItem({ ...item, flags: { "hunters-bestiary": { source: "harvest:m" } } }), false);
+  assert.equal(isManagedQuarryActor({ ...actor, flags: { "runyth-hunters-bestiary": { monsterId: "m" } } }), false);
+  assert.equal(isManagedHarvestItem({ ...item, flags: { "runyth-hunters-bestiary": { source: "harvest:m" } } }), false);
 });
 
 test("legacy managed Actors move into an existing canonical folder without touching user Actors", async () => {
@@ -92,12 +92,12 @@ test("a purely managed legacy folder is renamed in place when no canonical folde
   assert.equal(legacy.name, CANONICAL_ACTOR_FOLDER_NAME);
   assert.equal(managed.folder, legacy);
   assert.equal(result.actors.renamed, 1);
-  assert.equal(legacy.flags["hunters-bestiary-dnd5e-2024"].managedFolder, true);
+  assert.equal(legacy.flags["runyth-hunters-bestiary-dnd5e-2024"].managedFolder, true);
 });
 
 test("delete imported data removes only exact managed resources and unlinks matching Actors", async () => {
   const actorFolder = folder({ id: "actors", name: CANONICAL_ACTOR_FOLDER_NAME, type: "Actor" });
-  const itemFolder = folder({ id: "items", name: "Hunter's Bestiary - D&D 5e 2024: Harvest Items", type: "Item" });
+  const itemFolder = folder({ id: "items", name: "Runyth Hunter's Bestiary - D&D 5e 2024: Harvest Items", type: "Item" });
   const managedActor = document({ id: "managed-a", name: "Managed Actor", documentName: "Actor", folder: actorFolder, core: { monsterId: "m" }, dnd: { rules: "2024", statblockId: "m" } });
   const userActor = document({ id: "user-a", name: "User Actor", documentName: "Actor", folder: null, core: { monsterId: "user" } });
   const managedItem = document({ id: "managed-i", name: "Managed Item", documentName: "Item", folder: itemFolder, core: { source: "harvest:m" }, dnd: { monsterId: "m" } });

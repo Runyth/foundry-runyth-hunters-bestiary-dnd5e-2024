@@ -26,7 +26,7 @@
 ## 1.1.7
 
 - Defined registry contract 1.1.0 with explicit validation and registration signatures, structured diagnostics, idempotent provider replacement, and atomic rollback.
-- Removed copied unrestricted failure traversal and delegated operation inspection to Hunter's Bestiary 1.3.6.
+- Removed copied unrestricted failure traversal and delegated operation inspection to Runyth Hunter's Bestiary 1.3.6.
 - Preserved explicit nested import-everything results without enumerating returned Foundry Documents.
 - Added invalid-record, replacement, stale-record, and signature regression coverage.
 
@@ -66,7 +66,7 @@
 - Kept import and update progress windows in front of their owning dashboard while operations are active.
 - Automatically closed completed progress windows after the final notification and summary were emitted.
 - Closed any still-owned progress windows when the dashboard itself closes, preventing orphaned background dialogs.
-- Preserved the shared Hunter's Bestiary progress implementation, operation counts, busy states, and error reporting.
+- Preserved the shared Runyth Hunter's Bestiary progress implementation, operation counts, busy states, and error reporting.
 - Added regression coverage for progress-window ownership, foregrounding, and cleanup.
 
 ## 1.1.1 - 2026-07-31
@@ -75,7 +75,7 @@
 - Removed unsupported `minWidth` and `minHeight` keys from ApplicationV2 position defaults.
 - Retained the same effective minimum geometry through the shared persistence layer.
 - Added a regression test that prevents non-position keys from entering ApplicationV2 position defaults.
-- Updated the core dependency to Hunter's Bestiary 1.3.1.
+- Updated the core dependency to Runyth Hunter's Bestiary 1.3.1.
 
 
 - Normalized the canonical family title and coordinated dependency versions across all four official modules.
@@ -92,12 +92,12 @@
 - Made settings and system-adapter registration idempotent across repeated lifecycle calls.
 - Marked generated D&D Traits and Actions as provider-managed so core refreshes preserve unrelated Actor content.
 - Added ApplicationV2 listener cleanup, persistent window geometry, scoped CSS, and interference regression tests.
-- Raised the required Hunter's Bestiary core version to 1.2.1.
+- Raised the required Runyth Hunter's Bestiary core version to 1.2.1.
 - Excluded source-only documentation from the installable archive.
 
 ## 1.0.0
 
-- Added the reference D&D 5e 2024 system adapter for Hunter's Bestiary v1.2.0.
+- Added the reference D&D 5e 2024 system adapter for Runyth Hunter's Bestiary v1.2.0.
 - Added 24 original NPC stat blocks for all built-in quarry.
 - Added native D&D D20 field checks, harvest loot Items, and encounter profiles.
 - Added GM Actor provisioning and update controls with preserved ownership and folders.

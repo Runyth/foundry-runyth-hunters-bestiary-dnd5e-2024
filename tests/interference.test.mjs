@@ -24,7 +24,7 @@ test("D&D integration owns no sheet, HUD, Chat, Scene Control, or canvas render 
 });
 
 test("D&D integration CSS is scoped to module-owned roots and prefixes", async () => {
-  const css = await readFile(new URL("../styles/hunters-bestiary-dnd5e.css", import.meta.url), "utf8");
+  const css = await readFile(new URL("../styles/runyth-hunters-bestiary-dnd5e.css", import.meta.url), "utf8");
   for (const forbidden of [
     /^\s*\.window-header\b/m,
     /^\s*\.window-content\b/m,

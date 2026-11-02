@@ -6,10 +6,10 @@ const REQUIRED_DASHBOARD_API = "1.0.0";
 
 export function getCoreUi() {
   const ui = game.modules.get(CORE_MODULE_ID)?.api?.ui;
-  if (!ui) throw new Error("Hunter's Bestiary dashboard API is unavailable. Enable Hunter's Bestiary 1.3.2 or newer.");
+  if (!ui) throw new Error("Runyth Hunter's Bestiary dashboard API is unavailable. Enable Runyth Hunter's Bestiary 1.3.2 or newer.");
   const supportedMajor = Number(String(ui.version).split(".")[0]);
   const requiredMajor = Number(REQUIRED_DASHBOARD_API.split(".")[0]);
-  if (supportedMajor < requiredMajor) throw new Error(`Hunter's Bestiary dashboard API ${REQUIRED_DASHBOARD_API} is required; installed: ${ui.version}.`);
+  if (supportedMajor < requiredMajor) throw new Error(`Runyth Hunter's Bestiary dashboard API ${REQUIRED_DASHBOARD_API} is required; installed: ${ui.version}.`);
   return ui;
 }
 

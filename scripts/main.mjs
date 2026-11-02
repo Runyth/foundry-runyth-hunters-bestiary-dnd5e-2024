@@ -28,9 +28,9 @@ Hooks.once("ready", async () => {
   try {
     if (game.system.id !== SYSTEM_ID) throw new Error(`This module requires the dnd5e system, but '${game.system.id}' is active.`);
     const core = game.modules.get(CORE_MODULE_ID);
-    if (!core?.active || !core.api) throw new Error("Hunter's Bestiary core module v1.3.2 or newer must be active.");
+    if (!core?.active || !core.api) throw new Error("Runyth Hunter's Bestiary core module v1.3.2 or newer must be active.");
     await core.api.whenReady();
-    if (core.api.initializationStatus?.ok === false) throw new Error("Hunter's Bestiary core did not initialize successfully.");
+    if (core.api.initializationStatus?.ok === false) throw new Error("Runyth Hunter's Bestiary core did not initialize successfully.");
     core.api.registerComplementaryModule({
       moduleId: MODULE_ID,
       currentTitle: game.modules.get(MODULE_ID)?.title,

@@ -11,7 +11,7 @@ const OPTIONS = Object.freeze({
 
 function coreUi() {
   const toolkit = globalThis.game?.modules?.get?.(CORE_MODULE_ID)?.api?.ui;
-  if (!toolkit) throw new Error("Hunter's Bestiary dashboard API is unavailable.");
+  if (!toolkit) throw new Error("Runyth Hunter's Bestiary dashboard API is unavailable.");
   return toolkit;
 }
 

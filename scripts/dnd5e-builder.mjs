@@ -108,7 +108,7 @@ export function buildActorData(monster, statblock) {
         legres: { max: 0, spent: 0 },
         lair: { value: false, initiative: null, inside: false }
       },
-      source: { revision: 1, rules: "2024", book: "Hunter's Bestiary", license: "Original Content" },
+      source: { revision: 1, rules: "2024", book: "Runyth Hunter's Bestiary", license: "Original Content" },
       traits: {
         size,
         di: { value: clone(statblock.damageImmunities ?? []), custom: "", bypasses: [] },
@@ -152,7 +152,7 @@ export function buildHarvestItemData(monster, statblock) {
     img: resolveHarvestIcon(part),
     system: {
       description: { value: `<p>${escapeForRichText(localizeText(part.description))}</p><p><strong>${escapeForRichText(localizeText("HBDND5E.Fields.Quarry"))}:</strong> ${escapeForRichText(localizeText(monster.name))}</p>`, chat: "" },
-      source: { revision: 1, rules: "2024", book: "Hunter's Bestiary", license: "Original Content" },
+      source: { revision: 1, rules: "2024", book: "Runyth Hunter's Bestiary", license: "Original Content" },
       identified: true,
       quantity: Number(part.quantity ?? 1),
       weight: Number(part.weight ?? 0),
@@ -234,7 +234,7 @@ function buildTraitItem(trait, { monster, statblock, index }) {
     img: "icons/skills/wounds/anatomy-organ-heart-red.webp",
     system: {
       description: { value: `<p>${escapeForRichText(localizeText(trait.description))}</p>`, chat: "" },
-      source: { revision: 1, rules: "2024", book: "Hunter's Bestiary", license: "Original Content" },
+      source: { revision: 1, rules: "2024", book: "Runyth Hunter's Bestiary", license: "Original Content" },
       type: { value: "monster", subtype: "" },
       properties: [],
       activities: {},
@@ -255,7 +255,7 @@ function buildActionItem(action, { monster, statblock, index }) {
     img: attackType === "ranged" ? "icons/magic/fire/projectile-fireball-smoke-orange.webp" : "icons/skills/melee/claw-slashes-orange.webp",
     system: {
       description: { value: `<p>${escapeForRichText(localizeText(action.description))}</p>`, chat: "" },
-      source: { revision: 1, rules: "2024", book: "Hunter's Bestiary", license: "Original Content" },
+      source: { revision: 1, rules: "2024", book: "Runyth Hunter's Bestiary", license: "Original Content" },
       identified: true,
       quantity: 1,
       weight: 0,

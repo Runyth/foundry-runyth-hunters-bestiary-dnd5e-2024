@@ -23,7 +23,7 @@ test("bundled init hook always registers global settings and exposes the API", a
   const hooks = [];
   const menus = [];
   const settings = [];
-  const moduleRecord = { active: true, title: "Hunter's Bestiary - D&D 5e 2024", version: "1.2.2" };
+  const moduleRecord = { active: true, title: "Runyth Hunter's Bestiary - D&D 5e 2024", version: "1.2.2" };
 
   class MockApplicationV2 {}
   globalThis.foundry = {
@@ -42,7 +42,7 @@ test("bundled init hook always registers global settings and exposes the API", a
     callAll: () => undefined
   };
   globalThis.game = {
-    modules: new Map([["hunters-bestiary-dnd5e-2024", moduleRecord]]),
+    modules: new Map([["runyth-hunters-bestiary-dnd5e-2024", moduleRecord]]),
     settings: {
       registerMenu: (...args) => menus.push(args),
       register: (...args) => settings.push(args)

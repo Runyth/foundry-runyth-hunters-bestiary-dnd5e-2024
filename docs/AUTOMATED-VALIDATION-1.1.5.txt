@@ -3,7 +3,7 @@
 ## npm test
 ```text
 
-> hunters-bestiary-dnd5e-2024@1.1.5 test
+> runyth-hunters-bestiary-dnd5e-2024@1.1.5 test
 > node --test tests/*.test.mjs
 
 TAP version 13
@@ -183,7 +183,7 @@ ok 27 - provider replacement removes stale stat blocks
 ## npm run check
 ```text
 
-> hunters-bestiary-dnd5e-2024@1.1.5 check
+> runyth-hunters-bestiary-dnd5e-2024@1.1.5 check
 > node tools/check.mjs
 
 D&D 5e integration validation passed (10 groups):

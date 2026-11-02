@@ -4,7 +4,7 @@ import { readFile } from "node:fs/promises";
 
 const dashboard = await readFile(new URL("../scripts/apps/dashboard.mjs", import.meta.url), "utf8");
 const template = await readFile(new URL("../templates/dashboard.hbs", import.meta.url), "utf8");
-const css = await readFile(new URL("../styles/hunters-bestiary-dnd5e.css", import.meta.url), "utf8");
+const css = await readFile(new URL("../styles/runyth-hunters-bestiary-dnd5e.css", import.meta.url), "utf8");
 
 test("dashboard exposes separated repair and strict deletion workflows", () => {
   assert.match(template, /data-action="repairFolders"/);

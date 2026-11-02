@@ -1,4 +1,4 @@
-hunters-bestiary-dnd5e-2024 1.1.7 automated validation
+runyth-hunters-bestiary-dnd5e-2024 1.1.7 automated validation
 
 - npm test: 34/34 passed
 - npm run check: passed (11 validation groups)

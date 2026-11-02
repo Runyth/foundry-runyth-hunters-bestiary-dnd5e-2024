@@ -1,6 +1,6 @@
 # Patch Qualification 1.1.7
 
-This release formalizes the base D&D stat-block registry contract and consumes Hunter's Bestiary 1.3.6 for safe operation-result inspection.
+This release formalizes the base D&D stat-block registry contract and consumes Runyth Hunter's Bestiary 1.3.6 for safe operation-result inspection.
 
 ## Required gates
 

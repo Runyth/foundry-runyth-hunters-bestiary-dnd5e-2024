@@ -12,8 +12,8 @@ function withRuntime(callback) {
     user: { isGM: true },
     settings: { get: () => false },
     modules: new Map([
-      ["hunters-bestiary-dnd5e-2024", { version: "1.2.2" }],
-      ["hunters-bestiary", { api: {} }]
+      ["runyth-hunters-bestiary-dnd5e-2024", { version: "1.2.2" }],
+      ["runyth-hunters-bestiary", { api: {} }]
     ])
   };
   globalThis.Hooks = { callAll() {} };

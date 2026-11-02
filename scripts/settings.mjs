@@ -35,8 +35,8 @@ export function registerSettings(DashboardApp) {
   registerBoolean(SETTINGS.SHOW_ONBOARDING, true);
   registerBoolean(SETTINGS.ALLOW_INCOMPLETE_PACKS, false);
 
-  registerString(SETTINGS.ACTOR_FOLDER, "Hunter's Bestiary - D&D 5e 2024: Quarry Actors");
-  registerString(SETTINGS.HARVEST_FOLDER, "Hunter's Bestiary - D&D 5e 2024: Harvest Items");
+  registerString(SETTINGS.ACTOR_FOLDER, "Runyth Hunter's Bestiary - D&D 5e 2024: Quarry Actors");
+  registerString(SETTINGS.HARVEST_FOLDER, "Runyth Hunter's Bestiary - D&D 5e 2024: Harvest Items");
 
   game.settings.register(MODULE_ID, SETTINGS.WINDOW_STATES, {
     scope: "client",
