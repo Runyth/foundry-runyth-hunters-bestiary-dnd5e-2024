@@ -1,5 +1,7 @@
 ## 1.2.2 — 2026-08-03
 
+- First publication as a Runyth module: `runyth-hunters-bestiary-dnd5e-2024` / **Runyth Hunter's Bestiary - D&D 5e 2024** with the publication standard in place — deterministic `-mod`, `-src`, and `-doc` archives with per-version checksums, byte-identical rebuild verification, standard quality and release pipelines, the full GNU AGPL-3.0-or-later licence with the standard source notice, the standard README licence chapter, and the manifest URL surfaces.
+
 - Added one-pass harvest Item indexing and Foundry bulk create/update operations with precise individual fallback on batch failure.
 - Changed Import Everything to one coordinated Actor and Item operation instead of repeated per-monster world scans.
 - Parallelized independent settings and folder reconciliation work and used bulk document/folder updates where supported.
