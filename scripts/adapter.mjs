@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import { ADAPTER_ID, MODULE_ID, MODULE_VERSION, SYSTEM_ID } from "./constants.mjs";
 import { buildActorData, buildEncounterProfile, buildHarvestItemData, rollFieldCheck } from "./dnd5e-builder.mjs";
 

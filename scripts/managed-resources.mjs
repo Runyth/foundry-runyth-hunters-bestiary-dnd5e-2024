@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import { CORE_MODULE_ID, MODULE_ID, SETTINGS } from "./constants.mjs";
 
 export const CANONICAL_ACTOR_FOLDER_NAME = "Runyth Hunter's Bestiary - D&D 5e 2024: Quarry Actors";

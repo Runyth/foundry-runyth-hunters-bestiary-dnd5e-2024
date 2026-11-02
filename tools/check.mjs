@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import { readFile, readdir, access } from "node:fs/promises";
 import { constants as fsConstants } from "node:fs";
 import { dirname, extname, join, relative, resolve } from "node:path";

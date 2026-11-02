@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import { clone, slugify } from "./utils.mjs";
 
 export const STATBLOCK_REGISTRY_CONTRACT_VERSION = "1.1.0";

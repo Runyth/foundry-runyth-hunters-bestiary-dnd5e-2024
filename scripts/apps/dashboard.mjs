@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import { MODULE_ID, MODULE_VERSION, SETTINGS } from "../constants.mjs";
 import { PersistentApplication, getCoreUi } from "./base-app.mjs";
 import { notify } from "../utils.mjs";
