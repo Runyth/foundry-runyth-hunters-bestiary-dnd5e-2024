@@ -1,6 +1,6 @@
 # Localization
 
-Hunter’s Bestiary - D&D 5e 2024 uses Foundry VTT’s standard package-localization system. It does not provide or need a module-specific language selector.
+Runyth Hunter's Bestiary - D&D 5e 2024 uses Foundry VTT’s standard package-localization system. It does not provide or need a module-specific language selector.
 
 ## Selecting a language
 

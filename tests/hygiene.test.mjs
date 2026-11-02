@@ -85,13 +85,16 @@ test("published surfaces name no foreign module and give no foreign credit", () 
   }
 });
 
-test("no display title starts with the definite article", () => {
+test("no display title starts with the definite article and none uses a non-standard apostrophe", () => {
   const manifest = JSON.parse(read("module.json"));
   assert.ok(!manifest.title.startsWith("The "));
-  for (const file of ["README.md", "CHANGELOG.md", "docs/COMPATIBILITY-AUDIT.md"]) {
+  const curlyForm = "Hunter" + "\u2019" + "s Bestiary";
+  for (const file of ["README.md", "CHANGELOG.md", "docs/COMPATIBILITY-AUDIT.md", "docs/LOCALIZATION.md", ...everyProgramFile("docs", [".md", ".txt"])]) {
     const text = read(file);
     assert.ok(!text.includes("The Runyth Hunter's Bestiary - D&D 5e 2024"), `${file} must not use the definite-article display name`);
     assert.ok(!text.includes("The Hunter's Bestiary - D&D 5e 2024"), `${file} must not use the definite-article display name`);
+    assert.ok(!text.includes(curlyForm), `${file} must use the ASCII apostrophe in the family name`);
+    assert.ok(!/Hunters['\u2019]\sBestiary/.test(text), `${file} must not use the plural legacy family name`);
   }
 });
 
