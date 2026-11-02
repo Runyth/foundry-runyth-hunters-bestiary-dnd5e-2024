@@ -1,180 +1,127 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
-import { readFile, readdir, mkdir, writeFile, rm } from "node:fs/promises";
+// Dependency-free deterministic packaging for Runyth Hunter's Bestiary - D&D 5e 2024.
 import { createHash } from "node:crypto";
-import { deflateRawSync } from "node:zlib";
-import { dirname, join, relative, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
+import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
+import path from "node:path";
+import { join } from "node:path";
 import { spawnSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
+import { FIXED_TIME, sha256, writeZip } from "./zip.mjs";
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const dist = join(root, "dist");
-const manifest = JSON.parse(await readFile(join(root, "module.json"), "utf8"));
-const statblocks = JSON.parse(await readFile(join(root, "data/statblocks.json"), "utf8"));
-const folder = manifest.id;
-const version = manifest.version;
+export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+export const DIST = path.join(ROOT, "dist");
 
-const crcTable = Array.from({ length: 256 }, (_, index) => {
-  let value = index;
-  for (let bit = 0; bit < 8; bit += 1) value = (value & 1) ? (0xedb88320 ^ (value >>> 1)) : (value >>> 1);
-  return value >>> 0;
-});
+const moduleManifest = JSON.parse(readFileSync(path.join(ROOT, "module.json"), "utf8"));
+const MODULE_ID = moduleManifest.id;
+const VERSION = moduleManifest.version;
+const packageJson = JSON.parse(readFileSync(path.join(ROOT, "package.json"), "utf8"));
 
-const bundle = spawnSync(process.execPath, [join(root, "tools/bundle-runtime.mjs")], { stdio: "inherit" });
-if (bundle.status !== 0) process.exit(bundle.status ?? 1);
+const installName = `${MODULE_ID}-v${VERSION}-mod.zip`;
+const sourceName = `${MODULE_ID}-v${VERSION}-src.zip`;
+const docName = `${MODULE_ID}-v${VERSION}-doc.zip`;
+const checksumsName = `${MODULE_ID}-v${VERSION}-SHA256SUMS.txt`;
+const reportName = `${MODULE_ID}-v${VERSION}-build-report.json`;
 
-const check = spawnSync(process.execPath, [join(root, "tools/check.mjs")], { stdio: "inherit" });
-if (check.status !== 0) process.exit(check.status ?? 1);
-const tests = spawnSync(process.execPath, ["--test", "tests/*.test.mjs"], { cwd: root, stdio: "inherit", shell: true });
-if (tests.status !== 0) process.exit(tests.status ?? 1);
-
-await rm(dist, { recursive: true, force: true });
-await mkdir(dist, { recursive: true });
-
-const installTop = new Set(["module.json", "README.md", "CHANGELOG.md", "LICENSE", "main.mjs", "assets", "data", "lang", "styles", "templates"]);
-const allFiles = await collect(root, path => !path.startsWith("dist/") && !path.startsWith(".git/"));
-const installFiles = allFiles.filter(path => installTop.has(path.split("/")[0]));
-const sourceFiles = allFiles;
-
-const installName = `${folder}-v${version}.zip`;
-const sourceName = `${folder}-source-v${version}.zip`;
-await writeZip(join(dist, installName), installFiles);
-await writeZip(join(dist, sourceName), sourceFiles);
-
-const hashes = [];
-for (const name of [installName, sourceName]) {
-  const bytes = await readFile(join(dist, name));
-  hashes.push(`${createHash("sha256").update(bytes).digest("hex")}  ${name}`);
+if (packageJson.version !== VERSION) {
+  throw new Error(`package.json version ${packageJson.version} does not match module version ${VERSION}`);
 }
-await writeFile(join(dist, `${folder}-v${version}-SHA256SUMS.txt`), `${hashes.join("\n")}\n`);
 
-const report = `# Hunter's Bestiary - D&D 5e 2024 v${version} — Build Report
+function trackedFiles() {
+  const result = spawnSync("git", ["ls-files", "-z"], { cwd: ROOT, encoding: "buffer" });
+  if (result.status !== 0) throw new Error("unable to enumerate the tracked tree");
+  return result.stdout.toString().split("\0").filter(Boolean);
+}
 
-## Deliverables
+function buildZipEntries(rootName, names) {
+  const rows = [{ name: `${rootName}/`, isDirectory: true }];
+  const seen = new Set();
+  for (const name of names.sort()) {
+    if (seen.has(name)) continue;
+    seen.add(name);
+    const absolute = path.join(ROOT, name);
+    if (!existsSync(absolute)) throw new Error(`missing packaging input ${name}`);
+    if (statSync(absolute).isDirectory()) continue;
+    const mode = name.endsWith(".py") || name.endsWith(".sh") ? 0o755 : 0o644;
+    rows.push({ name: `${rootName}/${name}`, data: readFileSync(absolute), mode });
+  }
+  return rows;
+}
 
-- Installable module ZIP: \`${installName}\`
-- Reproducible source ZIP: \`${sourceName}\`
-- SHA-256 checksums: \`${folder}-v${version}-SHA256SUMS.txt\`
+function runtimeNames() {
+  const names = ["module.json", "LICENSE", "README.md", ...moduleManifest.esmodules];
+  if (moduleManifest.styles) names.push(...moduleManifest.styles);
+  if (moduleManifest.languages) {
+    for (const language of moduleManifest.languages) names.push(language.path);
+  }
+  for (const file of readdirSync(path.join(ROOT, "templates"))) names.push(`templates/${file}`);
+  names.push("data/statblocks.json");
+  for (const file of ["assets/hunters-bestiary-dnd5e.svg"]) names.push(file);
+  const bundle = spawnSync(process.execPath, [path.join(ROOT, "tools/bundle-runtime.mjs")], { stdio: "inherit" });
+  if (bundle.status !== 0) throw new Error("bundled runtime regeneration failed");
+  return names;
+}
 
-## Bundled D&D 5e content
-
-- ${statblocks.records.length} original 2024-rules NPC stat blocks
-- ${statblocks.records.reduce((sum, record) => sum + record.actions.length, 0)} natural-weapon Actions
-- ${statblocks.records.reduce((sum, record) => sum + record.traits.length, 0)} monster Traits
-- ${statblocks.records.reduce((sum, record) => sum + record.harvest.length, 0)} harvest loot Item definitions
-- Encounter profiles for every quarry
-
-## Implemented integration
-
-- Core system-adapter registration for D&D 5e
-- Legacy-compatible explicit Actor adapter registration
-- Native D&D D20 field checks
-- NPC Actor and hostile prototype Token generation
-- D&D loot Item generation with gp prices
-- CR, XP, encounter-role, count, and environment metadata
-- Strict provider registry and atomic full-monster-pack API
-- Persistent GM dashboard and configurable Actor/Item folders
-- Core-owned Actor image overrides synchronized with generated prototype Tokens
-- Foundry-standard modular localization with English fallback and extensible language dictionaries\n- Bulk harvest Item operations, cached stat-block loading, indexed dashboard context, and non-blocking geometry persistence
-
-## Validation performed
-
-- Manifest, dependency, localization, path, and stat-block validation
-- JavaScript syntax checks with \`node --check\`
-- Unit tests for registry strictness, Actor source generation, Activities, harvest Items, encounter profiles, and Foundry v13 entrypoint shape
-- Deprecated Foundry V1 API scan
-- Deterministic ZIP creation with non-versioned \`${folder}/\` root folder
-- SHA-256 generation
-
-## Runtime qualification
-
-The build environment cannot launch a real Foundry VTT client. The module targets Foundry v13.351 and D&D 5e 5.3.3 and has been statically and unit-tested. Complete \`docs/TEST-PLAN.md\` in the intended world before campaign use.
-`;
-await writeFile(join(dist, `${folder}-v${version}-build-report.md`), report);
-
-console.log(`Built ${installName} and ${sourceName} in ${dist}`);
-
-async function collect(base, include) {
-  const output = [];
-  async function walk(current) {
-    const entries = await readdir(current, { withFileTypes: true });
-    entries.sort((a, b) => a.name.localeCompare(b.name));
-    for (const entry of entries) {
-      const absolute = join(current, entry.name);
-      const path = relative(base, absolute).replaceAll("\\", "/");
-      if (!include(path)) continue;
-      if (entry.isDirectory()) await walk(absolute);
-      else output.push(path);
+function docNames() {
+  const rows = ["README.md", "CHANGELOG.md"];
+  const walk = (dir, prefix) => {
+    for (const entry of readdirSync(dir, { withFileTypes: true }).sort((x, y) => x.name.localeCompare(y.name))) {
+      const absolute = join(dir, entry.name);
+      if (entry.isDirectory()) walk(absolute, `${prefix}${entry.name}/`);
+      else rows.push(`${prefix}${entry.name}`);
     }
+  };
+  walk(path.join(ROOT, "docs"), "docs/");
+  return rows;
+}
+
+function sourceNames() {
+  return trackedFiles().filter((name) => !name.startsWith("dist/") && name !== checksumsName);
+}
+
+export function build() {
+  if (existsSync(DIST)) rmSync(DIST, { recursive: true, force: true });
+  mkdirSync(DIST, { recursive: true });
+
+  const names = {
+    mod: installName,
+    src: sourceName,
+    doc: docName,
+    checksums: checksumsName,
+    report: reportName
+  };
+
+  writeFileSync(path.join(DIST, names.mod), writeZip(buildZipEntries(MODULE_ID, runtimeNames())));
+  writeFileSync(path.join(DIST, names.doc), writeZip(buildZipEntries(`${MODULE_ID}-v${VERSION}-doc`, docNames())));
+  writeFileSync(path.join(DIST, names.src), writeZip(buildZipEntries(`${MODULE_ID}-v${VERSION}-src`, sourceNames())));
+
+  const checksumRows = [names.mod, names.src, names.doc, "module.json"].map((name) => {
+    const source = name === "module.json" ? path.join(ROOT, name) : path.join(DIST, name);
+    const digest = createHash("sha256").update(readFileSync(source)).digest("hex");
+    return `${digest}  ${name}`;
+  });
+  writeFileSync(path.join(DIST, names.checksums), `${checksumRows.join("\n")}\n`);
+
+  const report = {
+    moduleId: MODULE_ID,
+    title: moduleManifest.title,
+    version: VERSION,
+    generatedAt: FIXED_TIME.toISOString(),
+    artifacts: {},
+    notes: ["Deterministic packaging with fixed timestamps and store-mode entries."]
+  };
+  for (const name of [names.mod, names.src, names.doc, names.checksums]) {
+    const buffer = readFileSync(path.join(DIST, name));
+    report.artifacts[name] = { bytes: buffer.length, sha256: sha256(buffer) };
   }
-  await walk(base);
-  return output;
+  writeFileSync(path.join(DIST, names.report), `${JSON.stringify(report, null, 2)}\n`);
+
+  console.log(`Packaged ${names.mod} (${statSync(path.join(DIST, names.mod)).size} bytes)`);
+  console.log(`Packaged ${names.src} (${statSync(path.join(DIST, names.src)).size} bytes)`);
+  console.log(`Packaged ${names.doc} (${statSync(path.join(DIST, names.doc)).size} bytes)`);
+  console.log(`Wrote ${names.checksums}`);
+  console.log(`Wrote ${names.report}`);
+  return names;
 }
 
-async function writeZip(outputPath, files) {
-  const localParts = [];
-  const centralParts = [];
-  let offset = 0;
-  const dosTime = 0;
-  const dosDate = ((2026 - 1980) << 9) | (1 << 5) | 1;
-
-  for (const path of [...files].sort()) {
-    const data = await readFile(join(root, path));
-    const compressed = deflateRawSync(data, { level: 9 });
-    const name = Buffer.from(`${folder}/${path}`, "utf8");
-    const checksum = crc32(data);
-
-    const local = Buffer.alloc(30);
-    local.writeUInt32LE(0x04034b50, 0);
-    local.writeUInt16LE(20, 4);
-    local.writeUInt16LE(0x0800, 6);
-    local.writeUInt16LE(8, 8);
-    local.writeUInt16LE(dosTime, 10);
-    local.writeUInt16LE(dosDate, 12);
-    local.writeUInt32LE(checksum, 14);
-    local.writeUInt32LE(compressed.length, 18);
-    local.writeUInt32LE(data.length, 22);
-    local.writeUInt16LE(name.length, 26);
-    local.writeUInt16LE(0, 28);
-    localParts.push(local, name, compressed);
-
-    const central = Buffer.alloc(46);
-    central.writeUInt32LE(0x02014b50, 0);
-    central.writeUInt16LE(0x0314, 4);
-    central.writeUInt16LE(20, 6);
-    central.writeUInt16LE(0x0800, 8);
-    central.writeUInt16LE(8, 10);
-    central.writeUInt16LE(dosTime, 12);
-    central.writeUInt16LE(dosDate, 14);
-    central.writeUInt32LE(checksum, 16);
-    central.writeUInt32LE(compressed.length, 20);
-    central.writeUInt32LE(data.length, 24);
-    central.writeUInt16LE(name.length, 28);
-    central.writeUInt16LE(0, 30);
-    central.writeUInt16LE(0, 32);
-    central.writeUInt16LE(0, 34);
-    central.writeUInt16LE(0, 36);
-    central.writeUInt32LE((0o100644 << 16) >>> 0, 38);
-    central.writeUInt32LE(offset, 42);
-    centralParts.push(central, name);
-    offset += local.length + name.length + compressed.length;
-  }
-
-  const centralDirectory = Buffer.concat(centralParts);
-  const end = Buffer.alloc(22);
-  end.writeUInt32LE(0x06054b50, 0);
-  end.writeUInt16LE(0, 4);
-  end.writeUInt16LE(0, 6);
-  end.writeUInt16LE(files.length, 8);
-  end.writeUInt16LE(files.length, 10);
-  end.writeUInt32LE(centralDirectory.length, 12);
-  end.writeUInt32LE(offset, 16);
-  end.writeUInt16LE(0, 20);
-  await writeFile(outputPath, Buffer.concat([...localParts, centralDirectory, end]));
-}
-
-function crc32(buffer) {
-  let value = 0xffffffff;
-  for (const byte of buffer) value = crcTable[(value ^ byte) & 0xff] ^ (value >>> 8);
-  return (value ^ 0xffffffff) >>> 0;
-}
+if (process.argv[1] === fileURLToPath(import.meta.url)) build();
