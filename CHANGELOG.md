@@ -1,3 +1,9 @@
+## 1.2.3 — 2026-11-02
+
+### Fixed and improved
+
+- The family name in the release notes, build report, and documentation prose uses the standard ASCII apostrophe and the Runyth family prefix consistently (`Runyth Hunter's Bestiary - D&D 5e 2024`), replacing legacy curly and plural forms. No runtime, manifest relationship, or dependency change; the release moves a patch for the publication-surface naming alignment.
+
 ## 1.2.2 — 2026-08-03
 
 - First publication as a Runyth module: `runyth-hunters-bestiary-dnd5e-2024` / **Runyth Hunter's Bestiary - D&D 5e 2024** with the publication standard in place — deterministic `-mod`, `-src`, and `-doc` archives with per-version checksums, byte-identical rebuild verification, standard quality and release pipelines, the full GNU AGPL-3.0-or-later licence with the standard source notice, the standard README licence chapter, and the manifest URL surfaces.
@@ -22,7 +28,7 @@
 ## 1.2.0
 
 - Added clickable quarry images using Foundry’s standard file picker.
-- Synchronized dashboard, Actor portrait, and prototype-token images through Hunter’s Bestiary core.
+- Synchronized dashboard, Actor portrait, and prototype-token images through Runyth Hunter's Bestiary core.
 - Added source packaging documentation.
 
 ## 1.1.7

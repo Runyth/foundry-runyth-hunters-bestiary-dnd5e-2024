@@ -1,4 +1,4 @@
-# Hunter’s Bestiary - D&D 5e 2024 1.2.1
+# Runyth Hunter's Bestiary - D&D 5e 2024 1.2.1
 
 This patch converts all shipped interface and content localization to Foundry VTT’s standard modular localization system.
 
