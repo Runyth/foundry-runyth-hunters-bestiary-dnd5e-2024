@@ -1,3 +1,9 @@
+## 1.2.4 — 2026-11-02
+
+### Fixed and improved
+
+- The manifest description and the bundle icon label carry the family-prefixed name, and a publication guard pins that every family-name occurrence in README, changelog, data, docs, and program files is prefixed with the Runyth family, including the curly and plural legacy forms. No runtime behaviour, relationship, or dependency change; the release moves a patch for the naming alignment completion.
+
 ## 1.2.3 — 2026-11-02
 
 ### Fixed and improved

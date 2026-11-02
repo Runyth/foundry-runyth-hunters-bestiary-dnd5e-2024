@@ -85,6 +85,23 @@ test("published surfaces name no foreign module and give no foreign credit", () 
   }
 });
 
+test("the family name always carries the Runyth prefix", () => {
+  // Every occurrence of the family name in published prose must carry the Runyth prefix;
+  // the apostrophe-family variants used by the boundary forms are composed at runtime.
+  const apostrophes = ["'", "\u2019"];
+  const phrase = (apos) => ["Hunt", "er", apos, "s Bestiary"].join("");
+  const scanFiles = ["README.md", "CHANGELOG.md", "data/statblocks.json", ...everyProgramFile("docs", [".md", ".txt"])].concat(programFiles);
+  for (const file of scanFiles) {
+    let text = read(file);
+    for (const apos of apostrophes) {
+      for (const match of text.matchAll(new RegExp(phrase(apos), "g"))) {
+        const prefix = text.slice(Math.max(0, match.index - 7), match.index);
+        assert.equal(prefix, "Runyth ", `${file} family name must carry the Runyth prefix`);
+      }
+    }
+  }
+});
+
 test("no display title starts with the definite article and none uses a non-standard apostrophe", () => {
   const manifest = JSON.parse(read("module.json"));
   assert.ok(!manifest.title.startsWith("The "));
@@ -92,7 +109,7 @@ test("no display title starts with the definite article and none uses a non-stan
   for (const file of ["README.md", "CHANGELOG.md", "docs/COMPATIBILITY-AUDIT.md", "docs/LOCALIZATION.md", ...everyProgramFile("docs", [".md", ".txt"])]) {
     const text = read(file);
     assert.ok(!text.includes("The Runyth Hunter's Bestiary - D&D 5e 2024"), `${file} must not use the definite-article display name`);
-    assert.ok(!text.includes("The Hunter's Bestiary - D&D 5e 2024"), `${file} must not use the definite-article display name`);
+    assert.ok(!text.includes("The Runyth Hunter's Bestiary - D&D 5e 2024"), `${file} must not use the definite-article display name`);
     assert.ok(!text.includes(curlyForm), `${file} must use the ASCII apostrophe in the family name`);
     assert.ok(!/Hunters['\u2019]\sBestiary/.test(text), `${file} must not use the plural legacy family name`);
   }
