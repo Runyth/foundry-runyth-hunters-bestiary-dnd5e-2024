@@ -1,0 +1,8 @@
+hunters-bestiary-dnd5e-2024 1.1.7 automated validation
+
+- npm test: 34/34 passed
+- npm run check: passed (11 validation groups)
+- English/German localization parity: 90/90
+- Production import resolution: passed
+- Deprecated Actor sense alias scan: passed where applicable
+- Explicit operation-result contract regression tests: passed

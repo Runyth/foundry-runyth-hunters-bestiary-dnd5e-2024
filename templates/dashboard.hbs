@@ -1,0 +1,77 @@
+<div class="hbd5e-shell hb-shared-dashboard">
+  <header class="hbd5e-hero">
+    <label class="hbd5e-search"><span>{{localize "HBDND5E.Common.Search"}}</span><input type="search" value="{{query}}" data-hbd5e-search aria-label="{{localize 'HBDND5E.Common.Search'}}"></label>
+    <div>
+      <span class="eyebrow">{{localize "HBDND5E.App.Eyebrow"}}</span>
+      <h1>{{localize "HBDND5E.App.Heading"}}</h1>
+      <p>{{localize "HBDND5E.App.Introduction"}}</p>
+    </div>
+    <div class="status {{#if status.ready}}ready{{else}}warning{{/if}}">
+      <i class="fa-solid {{#if status.ready}}fa-circle-check{{else}}fa-triangle-exclamation{{/if}}"></i>
+      <span>{{readyLabel}}</span>
+    </div>
+  <div class="hbd5e-window-actions"><button type="button" data-action="resetSize" title="{{localize 'HBDND5E.ResetSize'}}" aria-label="{{localize 'HBDND5E.ResetSize'}}"><i class="fa-solid fa-expand"></i></button><button type="button" data-action="resetPosition" title="{{localize 'HBDND5E.ResetPosition'}}" aria-label="{{localize 'HBDND5E.ResetPosition'}}"><i class="fa-solid fa-crosshairs"></i></button></div></header>
+
+  <section class="hbd5e-stat-grid">
+    <article><strong>{{status.statblocks}}</strong><span>{{localize "HBDND5E.Stats.Statblocks"}}</span></article>
+    <article><strong>{{status.supportedMonsters}} / {{status.catalogueMonsters}}</strong><span>{{localize "HBDND5E.Stats.Supported"}}</span></article>
+    <article><strong>{{status.linkedActors}}</strong><span>{{localize "HBDND5E.Stats.LinkedActors"}}</span></article>
+    <article><strong>{{status.missingActors}}</strong><span>{{localize "HBDND5E.Stats.MissingActors"}}</span></article>
+  </section>
+
+  <section class="hbd5e-actions" aria-label="{{localize 'HBDND5E.Actions.Label'}}">
+    <button type="button" class="hbd5e-primary-action" data-action="importEverything"><i class="fa-solid fa-box-open"></i>{{localize "HBDND5E.Actions.ImportEverything"}}</button>
+    <button type="button" data-action="provisionMissing"><i class="fa-solid fa-user-plus"></i>{{localize "HBDND5E.Actions.ProvisionMissing"}}</button>
+    <button type="button" data-action="updateManaged"><i class="fa-solid fa-rotate"></i>{{localize "HBDND5E.Actions.UpdateManaged"}}</button>
+    <button type="button" data-action="createHarvest"><i class="fa-solid fa-gem"></i>{{localize "HBDND5E.Actions.CreateHarvest"}}</button>
+    <button type="button" data-action="openCore"><i class="fa-solid fa-book-skull"></i>{{localize "HBDND5E.Actions.OpenCore"}}</button>
+    <button type="button" data-action="validateIntegration"><i class="fa-solid fa-stethoscope"></i>{{localize "HBDND5E.Actions.Validate"}}</button>
+    <button type="button" data-action="repairFolders"><i class="fa-solid fa-folder-tree"></i>{{localize "HBDND5E.Actions.RepairFolders"}}</button>
+  </section>
+
+  <section class="hbd5e-info-grid">
+    <article>
+      <h2><i class="fa-solid fa-plug"></i>{{localize "HBDND5E.Sections.Integration"}}</h2>
+      <dl>
+        <div><dt>{{localize "HBDND5E.Fields.Core"}}</dt><dd>{{status.coreVersion}}</dd></div>
+        <div><dt>{{localize "HBDND5E.Fields.System"}}</dt><dd>{{status.systemId}} {{status.systemVersion}}</dd></div>
+        <div><dt>{{localize "HBDND5E.Fields.Module"}}</dt><dd>{{moduleVersion}}</dd></div>
+        <div><dt>{{localize "HBDND5E.Fields.ActorFolder"}}</dt><dd>{{actorFolder}}</dd></div>
+        <div><dt>{{localize "HBDND5E.Fields.HarvestFolder"}}</dt><dd>{{harvestFolder}}</dd></div>
+        <div><dt>{{localize "HBDND5E.Fields.PartialPacks"}}</dt><dd>{{#if partialAllowed}}{{localize "HBDND5E.Common.Enabled"}}{{else}}{{localize "HBDND5E.Common.Disabled"}}{{/if}}</dd></div>
+      </dl>
+    </article>
+    <article>
+      <h2><i class="fa-solid fa-code"></i>{{localize "HBDND5E.Sections.API"}}</h2>
+      <p>{{localize "HBDND5E.API.Description"}}</p>
+      <code>game.modules.get("hunters-bestiary-dnd5e-2024").api</code>
+      <p class="muted">{{localize "HBDND5E.API.Reference"}}</p>
+    </article>
+  </section>
+
+  <section class="hbd5e-table-section">
+    <header><div><h2>{{localize "HBDND5E.Sections.Quarry"}}</h2><p>{{localize "HBDND5E.Sections.QuarryHint"}}</p></div></header>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>{{localize "HBDND5E.Fields.Quarry"}}</th><th>CR</th><th>{{localize "HBDND5E.Fields.Role"}}</th><th>{{localize "HBDND5E.Fields.Actions"}}</th><th>{{localize "HBDND5E.Fields.Harvest"}}</th><th>{{localize "HBDND5E.Fields.Actor"}}</th></tr></thead>
+        <tbody>
+          {{#each rows}}
+            <tr data-hbd5e-record data-search-text="{{searchText}}"><td><div class="hbd5e-quarry-cell">{{#if @root.isGM}}<button type="button" class="hbd5e-quarry-image-button" data-action="changeQuarryImage" data-monster-id="{{id}}" title="{{localize 'HBDND5E.Actions.ChangeImage'}}"><img src="{{image}}" alt="{{name}}" loading="lazy"><span><i class="fa-solid fa-camera"></i></span></button>{{else}}<img class="hbd5e-quarry-image" src="{{image}}" alt="{{name}}" loading="lazy">{{/if}}<div><strong>{{name}}</strong><small>{{id}}</small></div></div></td><td>{{cr}}</td><td>{{role}}</td><td>{{actionCount}}</td><td>{{harvestCount}}</td><td>{{#if actorLinked}}<i class="fa-solid fa-link success"></i>{{else}}<i class="fa-solid fa-link-slash muted"></i>{{/if}}</td></tr>
+          {{/each}}
+          <tr data-hbd5e-empty hidden><td colspan="6">{{localize "HBDND5E.Common.NoResults"}}</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  {{#if isGM}}
+    <section class="hbd5e-danger-zone">
+      <div>
+        <h2><i class="fa-solid fa-triangle-exclamation"></i>{{localize "HBDND5E.Delete.Title"}}</h2>
+        <p>{{localize "HBDND5E.Delete.Scope"}}</p>
+        <p class="hbd5e-danger-summary">{{importedSummary.actors}} {{localize "HBDND5E.Delete.Actors"}} · {{importedSummary.items}} {{localize "HBDND5E.Delete.Items"}}</p>
+      </div>
+      <button type="button" class="hbd5e-danger-button" data-action="deleteImported" {{#unless importedSummary.total}}disabled{{/unless}}><i class="fa-solid fa-trash"></i>{{localize "HBDND5E.Delete.Button"}}</button>
+    </section>
+  {{/if}}
+</div>

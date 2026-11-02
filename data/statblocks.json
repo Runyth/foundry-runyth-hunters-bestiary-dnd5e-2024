@@ -1,0 +1,2332 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "id": "ashback-troll",
+      "monsterId": "ashback-troll",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 7,
+      "size": "lg",
+      "creatureType": "giant",
+      "alignment": "unaligned",
+      "ac": 16,
+      "hp": {
+        "value": 126,
+        "formula": "12d10 + 60"
+      },
+      "abilities": {
+        "str": 20,
+        "dex": 11,
+        "con": 20,
+        "int": 6,
+        "wis": 13,
+        "cha": 8
+      },
+      "speed": {
+        "walk": 40
+      },
+      "senses": {
+        "darkvision": 60
+      },
+      "savingThrows": [
+        "str",
+        "con"
+      ],
+      "skills": {
+        "prc": 1,
+        "sur": 1
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.ashback_troll.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.ashback_troll.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.ashback_troll.actions.action_1.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 10,
+          "range": null,
+          "damage": "2d10+5",
+          "damageType": "bludgeoning",
+          "description": "HBDND5E.Content.Statblocks.ashback_troll.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.ashback_troll.actions.action_2.name",
+          "ability": "con",
+          "attackType": "ranged",
+          "reach": null,
+          "range": 30,
+          "damage": "4d6+0",
+          "damageType": "fire",
+          "description": "HBDND5E.Content.Statblocks.ashback_troll.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.ashback_troll.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.ashback_troll.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 75,
+          "rarity": "rare",
+          "img": "icons/commodities/leather/scales-brown.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.ashback_troll.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.ashback_troll.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 35,
+          "rarity": "uncommon",
+          "img": "icons/commodities/biological/organ-liver-red.webp"
+        }
+      ],
+      "encounter": {
+        "role": "brute",
+        "tier": 3,
+        "suggestedGroupSize": 3,
+        "environments": [
+          "HBDND5E.Content.Statblocks.ashback_troll.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.ashback_troll.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "mireglass-basilisk",
+      "monsterId": "mireglass-basilisk",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 10,
+      "size": "lg",
+      "creatureType": "monstrosity",
+      "alignment": "unaligned",
+      "ac": 18,
+      "hp": {
+        "value": 168,
+        "formula": "16d10 + 80"
+      },
+      "abilities": {
+        "str": 18,
+        "dex": 14,
+        "con": 20,
+        "int": 5,
+        "wis": 15,
+        "cha": 10
+      },
+      "speed": {
+        "walk": 30,
+        "swim": 30
+      },
+      "senses": {
+        "darkvision": 60,
+        "tremorsense": 30
+      },
+      "savingThrows": [
+        "con",
+        "wis"
+      ],
+      "skills": {
+        "prc": 2,
+        "ste": 1
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.mireglass_basilisk.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.mireglass_basilisk.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.mireglass_basilisk.actions.action_1.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 10,
+          "range": null,
+          "damage": "3d10+4",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.mireglass_basilisk.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.mireglass_basilisk.actions.action_2.name",
+          "ability": "dex",
+          "attackType": "melee",
+          "reach": 15,
+          "range": null,
+          "damage": "3d8+4",
+          "damageType": "slashing",
+          "description": "HBDND5E.Content.Statblocks.mireglass_basilisk.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.mireglass_basilisk.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.mireglass_basilisk.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 120,
+          "rarity": "rare",
+          "img": "icons/commodities/leather/scales-blue-white.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.mireglass_basilisk.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.mireglass_basilisk.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 90,
+          "rarity": "rare",
+          "img": "icons/commodities/biological/eye-lizard-green.webp"
+        }
+      ],
+      "encounter": {
+        "role": "controller",
+        "tier": 4,
+        "suggestedGroupSize": 2,
+        "environments": [
+          "HBDND5E.Content.Statblocks.mireglass_basilisk.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.mireglass_basilisk.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "thornhide-boar",
+      "monsterId": "thornhide-boar",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 3,
+      "size": "lg",
+      "creatureType": "beast",
+      "alignment": "unaligned",
+      "ac": 15,
+      "hp": {
+        "value": 76,
+        "formula": "8d10 + 32"
+      },
+      "abilities": {
+        "str": 19,
+        "dex": 11,
+        "con": 18,
+        "int": 3,
+        "wis": 12,
+        "cha": 7
+      },
+      "speed": {
+        "walk": 40
+      },
+      "senses": {
+        "darkvision": 30
+      },
+      "savingThrows": [
+        "str",
+        "con"
+      ],
+      "skills": {
+        "prc": 1,
+        "sur": 1
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.thornhide_boar.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.thornhide_boar.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.thornhide_boar.actions.action_1.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 5,
+          "range": null,
+          "damage": "2d8+4",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.thornhide_boar.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.thornhide_boar.actions.action_2.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 5,
+          "range": null,
+          "damage": "2d6+4",
+          "damageType": "bludgeoning",
+          "description": "HBDND5E.Content.Statblocks.thornhide_boar.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.thornhide_boar.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.thornhide_boar.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 18,
+          "rarity": "uncommon",
+          "img": "icons/commodities/materials/hair-tuft-brown.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.thornhide_boar.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.thornhide_boar.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 30,
+          "rarity": "uncommon",
+          "img": "icons/commodities/leather/leather-pelt-cured.webp"
+        }
+      ],
+      "encounter": {
+        "role": "brute",
+        "tier": 2,
+        "suggestedGroupSize": 3,
+        "environments": [
+          "HBDND5E.Content.Statblocks.thornhide_boar.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.thornhide_boar.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "moonveil-stag",
+      "monsterId": "moonveil-stag",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 6,
+      "size": "lg",
+      "creatureType": "fey",
+      "alignment": "unaligned",
+      "ac": 16,
+      "hp": {
+        "value": 110,
+        "formula": "13d10 + 39"
+      },
+      "abilities": {
+        "str": 16,
+        "dex": 18,
+        "con": 16,
+        "int": 10,
+        "wis": 17,
+        "cha": 15
+      },
+      "speed": {
+        "walk": 60
+      },
+      "senses": {
+        "darkvision": 60
+      },
+      "savingThrows": [
+        "dex",
+        "wis",
+        "cha"
+      ],
+      "skills": {
+        "prc": 2,
+        "ste": 1,
+        "sur": 1
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.moonveil_stag.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.moonveil_stag.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.moonveil_stag.actions.action_1.name",
+          "ability": "dex",
+          "attackType": "melee",
+          "reach": 10,
+          "range": null,
+          "damage": "2d10+4",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.moonveil_stag.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.moonveil_stag.actions.action_2.name",
+          "ability": "dex",
+          "attackType": "melee",
+          "reach": 5,
+          "range": null,
+          "damage": "2d8+4",
+          "damageType": "bludgeoning",
+          "description": "HBDND5E.Content.Statblocks.moonveil_stag.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.moonveil_stag.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.moonveil_stag.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 85,
+          "rarity": "rare",
+          "img": "icons/commodities/bones/horn-antler-pink-white.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.moonveil_stag.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.moonveil_stag.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 55,
+          "rarity": "rare",
+          "img": "icons/commodities/materials/liquid-droplet-blue.webp"
+        }
+      ],
+      "encounter": {
+        "role": "skirmisher",
+        "tier": 3,
+        "suggestedGroupSize": 3,
+        "environments": [
+          "HBDND5E.Content.Statblocks.moonveil_stag.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.moonveil_stag.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "saltmarsh-mireclaw",
+      "monsterId": "saltmarsh-mireclaw",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 2,
+      "size": "lg",
+      "creatureType": "beast",
+      "alignment": "unaligned",
+      "ac": 16,
+      "hp": {
+        "value": 68,
+        "formula": "8d10 + 24"
+      },
+      "abilities": {
+        "str": 18,
+        "dex": 10,
+        "con": 16,
+        "int": 2,
+        "wis": 13,
+        "cha": 5
+      },
+      "speed": {
+        "walk": 25,
+        "burrow": 20,
+        "swim": 30
+      },
+      "senses": {
+        "blindsight": 30
+      },
+      "savingThrows": [
+        "str",
+        "con"
+      ],
+      "skills": {
+        "prc": 1,
+        "ste": 1
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.saltmarsh_mireclaw.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.saltmarsh_mireclaw.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.saltmarsh_mireclaw.actions.action_1.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 10,
+          "range": null,
+          "damage": "2d8+4",
+          "damageType": "slashing",
+          "description": "HBDND5E.Content.Statblocks.saltmarsh_mireclaw.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.saltmarsh_mireclaw.actions.action_2.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 5,
+          "range": null,
+          "damage": "2d6+4",
+          "damageType": "bludgeoning",
+          "description": "HBDND5E.Content.Statblocks.saltmarsh_mireclaw.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.saltmarsh_mireclaw.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.saltmarsh_mireclaw.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 15,
+          "rarity": "uncommon",
+          "img": "icons/commodities/biological/organ-bladder-red.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.saltmarsh_mireclaw.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.saltmarsh_mireclaw.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 22,
+          "rarity": "uncommon",
+          "img": "icons/commodities/biological/shell-turtle-grey.webp"
+        }
+      ],
+      "encounter": {
+        "role": "ambusher",
+        "tier": 2,
+        "suggestedGroupSize": 3,
+        "environments": [
+          "HBDND5E.Content.Statblocks.saltmarsh_mireclaw.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.saltmarsh_mireclaw.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "hollow-eyed-wyrm",
+      "monsterId": "hollow-eyed-wyrm",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 15,
+      "size": "huge",
+      "creatureType": "dragon",
+      "alignment": "unaligned",
+      "ac": 19,
+      "hp": {
+        "value": 247,
+        "formula": "19d12 + 114"
+      },
+      "abilities": {
+        "str": 24,
+        "dex": 12,
+        "con": 22,
+        "int": 8,
+        "wis": 18,
+        "cha": 12
+      },
+      "speed": {
+        "walk": 30,
+        "burrow": 40,
+        "climb": 30
+      },
+      "senses": {
+        "blindsight": 120,
+        "tremorsense": 120
+      },
+      "savingThrows": [
+        "str",
+        "con",
+        "wis"
+      ],
+      "skills": {
+        "prc": 2,
+        "sur": 2
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.hollow_eyed_wyrm.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.hollow_eyed_wyrm.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.hollow_eyed_wyrm.actions.action_1.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 15,
+          "range": null,
+          "damage": "4d12+7",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.hollow_eyed_wyrm.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.hollow_eyed_wyrm.actions.action_2.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 20,
+          "range": null,
+          "damage": "4d10+7",
+          "damageType": "bludgeoning",
+          "description": "HBDND5E.Content.Statblocks.hollow_eyed_wyrm.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.hollow_eyed_wyrm.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.hollow_eyed_wyrm.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 450,
+          "rarity": "veryRare",
+          "img": "icons/commodities/biological/eye-simple-blue.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.hollow_eyed_wyrm.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.hollow_eyed_wyrm.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 300,
+          "rarity": "veryRare",
+          "img": "icons/commodities/bones/bone-spine-grey.webp"
+        }
+      ],
+      "encounter": {
+        "role": "solo",
+        "tier": 5,
+        "suggestedGroupSize": 1,
+        "environments": [
+          "HBDND5E.Content.Statblocks.hollow_eyed_wyrm.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.hollow_eyed_wyrm.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "fen-lantern-moth",
+      "monsterId": "fen-lantern-moth",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 0.25,
+      "size": "sm",
+      "creatureType": "beast",
+      "alignment": "unaligned",
+      "ac": 12,
+      "hp": {
+        "value": 10,
+        "formula": "4d6 - 4"
+      },
+      "abilities": {
+        "str": 4,
+        "dex": 15,
+        "con": 8,
+        "int": 2,
+        "wis": 12,
+        "cha": 7
+      },
+      "speed": {
+        "walk": 5,
+        "fly": 40
+      },
+      "senses": {
+        "darkvision": 60
+      },
+      "savingThrows": [
+        "dex"
+      ],
+      "skills": {
+        "ste": 1,
+        "prc": 1
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.fen_lantern_moth.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.fen_lantern_moth.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.fen_lantern_moth.actions.action_1.name",
+          "ability": "dex",
+          "attackType": "ranged",
+          "reach": null,
+          "range": 20,
+          "damage": "1d4+2",
+          "damageType": "poison",
+          "description": "HBDND5E.Content.Statblocks.fen_lantern_moth.actions.action_1.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.fen_lantern_moth.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.fen_lantern_moth.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 4,
+          "rarity": "common",
+          "img": "icons/commodities/materials/powder-teal.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.fen_lantern_moth.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.fen_lantern_moth.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 2,
+          "rarity": "common",
+          "img": "icons/commodities/materials/material-webbing.webp"
+        }
+      ],
+      "encounter": {
+        "role": "swarm-support",
+        "tier": 1,
+        "suggestedGroupSize": 3,
+        "environments": [
+          "HBDND5E.Content.Statblocks.fen_lantern_moth.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.fen_lantern_moth.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "gravewind-hyena",
+      "monsterId": "gravewind-hyena",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 2,
+      "size": "med",
+      "creatureType": "beast",
+      "alignment": "unaligned",
+      "ac": 14,
+      "hp": {
+        "value": 45,
+        "formula": "6d8 + 18"
+      },
+      "abilities": {
+        "str": 16,
+        "dex": 15,
+        "con": 16,
+        "int": 5,
+        "wis": 13,
+        "cha": 7
+      },
+      "speed": {
+        "walk": 50
+      },
+      "senses": {
+        "darkvision": 60
+      },
+      "savingThrows": [
+        "dex",
+        "con"
+      ],
+      "skills": {
+        "prc": 1,
+        "ste": 1,
+        "sur": 1
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.gravewind_hyena.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.gravewind_hyena.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.gravewind_hyena.actions.action_1.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 5,
+          "range": null,
+          "damage": "2d6+3",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.gravewind_hyena.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.gravewind_hyena.actions.action_2.name",
+          "ability": "dex",
+          "attackType": "melee",
+          "reach": 5,
+          "range": null,
+          "damage": "1d10+2",
+          "damageType": "slashing",
+          "description": "HBDND5E.Content.Statblocks.gravewind_hyena.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.gravewind_hyena.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.gravewind_hyena.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 12,
+          "rarity": "uncommon",
+          "img": "icons/commodities/materials/hair-tuft-grey-brown.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.gravewind_hyena.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.gravewind_hyena.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 8,
+          "rarity": "common",
+          "img": "icons/creatures/abilities/fang-tooth-blood-red.webp"
+        }
+      ],
+      "encounter": {
+        "role": "pack-hunter",
+        "tier": 2,
+        "suggestedGroupSize": 3,
+        "environments": [
+          "HBDND5E.Content.Statblocks.gravewind_hyena.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.gravewind_hyena.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "ironjaw-lindworm",
+      "monsterId": "ironjaw-lindworm",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 9,
+      "size": "lg",
+      "creatureType": "dragon",
+      "alignment": "unaligned",
+      "ac": 18,
+      "hp": {
+        "value": 152,
+        "formula": "16d10 + 64"
+      },
+      "abilities": {
+        "str": 22,
+        "dex": 12,
+        "con": 19,
+        "int": 7,
+        "wis": 15,
+        "cha": 10
+      },
+      "speed": {
+        "walk": 30,
+        "swim": 50
+      },
+      "senses": {
+        "darkvision": 90
+      },
+      "savingThrows": [
+        "str",
+        "con",
+        "wis"
+      ],
+      "skills": {
+        "ath": 2,
+        "prc": 1
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.ironjaw_lindworm.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.ironjaw_lindworm.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.ironjaw_lindworm.actions.action_1.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 10,
+          "range": null,
+          "damage": "3d12+6",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.ironjaw_lindworm.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.ironjaw_lindworm.actions.action_2.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 15,
+          "range": null,
+          "damage": "3d8+6",
+          "damageType": "bludgeoning",
+          "description": "HBDND5E.Content.Statblocks.ironjaw_lindworm.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.ironjaw_lindworm.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.ironjaw_lindworm.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 140,
+          "rarity": "rare",
+          "img": "icons/commodities/metal/mail-plate-steel.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.ironjaw_lindworm.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.ironjaw_lindworm.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 70,
+          "rarity": "rare",
+          "img": "icons/commodities/materials/liquid-green.webp"
+        }
+      ],
+      "encounter": {
+        "role": "brute",
+        "tier": 4,
+        "suggestedGroupSize": 2,
+        "environments": [
+          "HBDND5E.Content.Statblocks.ironjaw_lindworm.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.ironjaw_lindworm.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "gloamfang-cougar",
+      "monsterId": "gloamfang-cougar",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 5,
+      "size": "lg",
+      "creatureType": "beast",
+      "alignment": "unaligned",
+      "ac": 15,
+      "hp": {
+        "value": 88,
+        "formula": "11d10 + 33"
+      },
+      "abilities": {
+        "str": 18,
+        "dex": 19,
+        "con": 16,
+        "int": 6,
+        "wis": 16,
+        "cha": 10
+      },
+      "speed": {
+        "walk": 50,
+        "climb": 40
+      },
+      "senses": {
+        "darkvision": 90
+      },
+      "savingThrows": [
+        "dex",
+        "wis"
+      ],
+      "skills": {
+        "prc": 2,
+        "ste": 2
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.gloamfang_cougar.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.gloamfang_cougar.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.gloamfang_cougar.actions.action_1.name",
+          "ability": "dex",
+          "attackType": "melee",
+          "reach": 5,
+          "range": null,
+          "damage": "2d10+4",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.gloamfang_cougar.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.gloamfang_cougar.actions.action_2.name",
+          "ability": "dex",
+          "attackType": "melee",
+          "reach": 5,
+          "range": null,
+          "damage": "2d8+4",
+          "damageType": "slashing",
+          "description": "HBDND5E.Content.Statblocks.gloamfang_cougar.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.gloamfang_cougar.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.gloamfang_cougar.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 45,
+          "rarity": "rare",
+          "img": "icons/commodities/materials/hair-tuft-grey.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.gloamfang_cougar.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.gloamfang_cougar.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 80,
+          "rarity": "rare",
+          "img": "icons/commodities/leather/fur-pelt-brown.webp"
+        }
+      ],
+      "encounter": {
+        "role": "ambusher",
+        "tier": 3,
+        "suggestedGroupSize": 3,
+        "environments": [
+          "HBDND5E.Content.Statblocks.gloamfang_cougar.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.gloamfang_cougar.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "carrion-bell-spider",
+      "monsterId": "carrion-bell-spider",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 5,
+      "size": "lg",
+      "creatureType": "monstrosity",
+      "alignment": "unaligned",
+      "ac": 16,
+      "hp": {
+        "value": 93,
+        "formula": "11d10 + 33"
+      },
+      "abilities": {
+        "str": 17,
+        "dex": 18,
+        "con": 16,
+        "int": 5,
+        "wis": 14,
+        "cha": 8
+      },
+      "speed": {
+        "walk": 40,
+        "climb": 40
+      },
+      "senses": {
+        "darkvision": 60,
+        "tremorsense": 60
+      },
+      "savingThrows": [
+        "dex",
+        "con"
+      ],
+      "skills": {
+        "prc": 1,
+        "ste": 2
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.carrion_bell_spider.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.carrion_bell_spider.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.carrion_bell_spider.actions.action_1.name",
+          "ability": "dex",
+          "attackType": "melee",
+          "reach": 5,
+          "range": null,
+          "damage": "2d8+4",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.carrion_bell_spider.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.carrion_bell_spider.actions.action_2.name",
+          "ability": "dex",
+          "attackType": "ranged",
+          "reach": null,
+          "range": 30,
+          "damage": "2d6+4",
+          "damageType": "slashing",
+          "description": "HBDND5E.Content.Statblocks.carrion_bell_spider.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.carrion_bell_spider.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.carrion_bell_spider.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 65,
+          "rarity": "rare",
+          "img": "icons/commodities/materials/material-webbing.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.carrion_bell_spider.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.carrion_bell_spider.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 50,
+          "rarity": "rare",
+          "img": "icons/commodities/materials/liquid-purple.webp"
+        }
+      ],
+      "encounter": {
+        "role": "controller",
+        "tier": 3,
+        "suggestedGroupSize": 3,
+        "environments": [
+          "HBDND5E.Content.Statblocks.carrion_bell_spider.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.carrion_bell_spider.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "rimehorn-aurochs",
+      "monsterId": "rimehorn-aurochs",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 6,
+      "size": "huge",
+      "creatureType": "beast",
+      "alignment": "unaligned",
+      "ac": 17,
+      "hp": {
+        "value": 126,
+        "formula": "12d12 + 48"
+      },
+      "abilities": {
+        "str": 22,
+        "dex": 10,
+        "con": 19,
+        "int": 3,
+        "wis": 14,
+        "cha": 8
+      },
+      "speed": {
+        "walk": 45
+      },
+      "senses": {
+        "darkvision": 30
+      },
+      "savingThrows": [
+        "str",
+        "con"
+      ],
+      "skills": {
+        "prc": 1,
+        "sur": 1
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.rimehorn_aurochs.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.rimehorn_aurochs.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.rimehorn_aurochs.actions.action_1.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 10,
+          "range": null,
+          "damage": "3d10+6",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.rimehorn_aurochs.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.rimehorn_aurochs.actions.action_2.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 5,
+          "range": null,
+          "damage": "3d8+6",
+          "damageType": "bludgeoning",
+          "description": "HBDND5E.Content.Statblocks.rimehorn_aurochs.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.rimehorn_aurochs.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.rimehorn_aurochs.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 95,
+          "rarity": "rare",
+          "img": "icons/commodities/bones/horn-jagged-grey-blue.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.rimehorn_aurochs.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.rimehorn_aurochs.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 28,
+          "rarity": "uncommon",
+          "img": "icons/consumables/meat/side-pork-fat-skin-pink.webp"
+        }
+      ],
+      "encounter": {
+        "role": "brute",
+        "tier": 3,
+        "suggestedGroupSize": 3,
+        "environments": [
+          "HBDND5E.Content.Statblocks.rimehorn_aurochs.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.rimehorn_aurochs.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "embercrop-manticore",
+      "monsterId": "embercrop-manticore",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 13,
+      "size": "lg",
+      "creatureType": "monstrosity",
+      "alignment": "unaligned",
+      "ac": 18,
+      "hp": {
+        "value": 210,
+        "formula": "20d10 + 100"
+      },
+      "abilities": {
+        "str": 22,
+        "dex": 16,
+        "con": 20,
+        "int": 10,
+        "wis": 15,
+        "cha": 14
+      },
+      "speed": {
+        "walk": 40,
+        "fly": 50
+      },
+      "senses": {
+        "darkvision": 60
+      },
+      "savingThrows": [
+        "str",
+        "con",
+        "dex"
+      ],
+      "skills": {
+        "prc": 2,
+        "sur": 1
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.embercrop_manticore.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.embercrop_manticore.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.embercrop_manticore.actions.action_1.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 10,
+          "range": null,
+          "damage": "3d12+6",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.embercrop_manticore.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.embercrop_manticore.actions.action_2.name",
+          "ability": "dex",
+          "attackType": "ranged",
+          "reach": null,
+          "range": 120,
+          "damage": "4d8+3",
+          "damageType": "fire",
+          "description": "HBDND5E.Content.Statblocks.embercrop_manticore.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.embercrop_manticore.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.embercrop_manticore.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 350,
+          "rarity": "veryRare",
+          "img": "icons/commodities/biological/organ-stomach.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.embercrop_manticore.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.embercrop_manticore.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 180,
+          "rarity": "rare",
+          "img": "icons/commodities/bones/bone-spine-white.webp"
+        }
+      ],
+      "encounter": {
+        "role": "artillery",
+        "tier": 5,
+        "suggestedGroupSize": 2,
+        "environments": [
+          "HBDND5E.Content.Statblocks.embercrop_manticore.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.embercrop_manticore.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "stormglass-roc",
+      "monsterId": "stormglass-roc",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 14,
+      "size": "grg",
+      "creatureType": "monstrosity",
+      "alignment": "unaligned",
+      "ac": 19,
+      "hp": {
+        "value": 238,
+        "formula": "17d20 + 60"
+      },
+      "abilities": {
+        "str": 26,
+        "dex": 15,
+        "con": 18,
+        "int": 7,
+        "wis": 17,
+        "cha": 12
+      },
+      "speed": {
+        "walk": 20,
+        "fly": 120
+      },
+      "senses": {
+        "darkvision": 60
+      },
+      "savingThrows": [
+        "str",
+        "con",
+        "wis"
+      ],
+      "skills": {
+        "prc": 2
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.stormglass_roc.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.stormglass_roc.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.stormglass_roc.actions.action_1.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 15,
+          "range": null,
+          "damage": "4d10+8",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.stormglass_roc.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.stormglass_roc.actions.action_2.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 10,
+          "range": null,
+          "damage": "3d12+8",
+          "damageType": "slashing",
+          "description": "HBDND5E.Content.Statblocks.stormglass_roc.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.stormglass_roc.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.stormglass_roc.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 500,
+          "rarity": "veryRare",
+          "img": "icons/commodities/materials/feather-stained-glass-blue.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.stormglass_roc.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.stormglass_roc.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 420,
+          "rarity": "veryRare",
+          "img": "icons/commodities/biological/organ-heart-red.webp"
+        }
+      ],
+      "encounter": {
+        "role": "solo",
+        "tier": 5,
+        "suggestedGroupSize": 1,
+        "environments": [
+          "HBDND5E.Content.Statblocks.stormglass_roc.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.stormglass_roc.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "reed-crowned-crocodile",
+      "monsterId": "reed-crowned-crocodile",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 6,
+      "size": "huge",
+      "creatureType": "beast",
+      "alignment": "unaligned",
+      "ac": 17,
+      "hp": {
+        "value": 133,
+        "formula": "14d12 + 42"
+      },
+      "abilities": {
+        "str": 22,
+        "dex": 10,
+        "con": 17,
+        "int": 3,
+        "wis": 14,
+        "cha": 7
+      },
+      "speed": {
+        "walk": 30,
+        "swim": 50
+      },
+      "senses": {
+        "darkvision": 60
+      },
+      "savingThrows": [
+        "str",
+        "con"
+      ],
+      "skills": {
+        "prc": 1,
+        "ste": 2
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.reed_crowned_crocodile.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.reed_crowned_crocodile.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.reed_crowned_crocodile.actions.action_1.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 10,
+          "range": null,
+          "damage": "3d10+6",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.reed_crowned_crocodile.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.reed_crowned_crocodile.actions.action_2.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 15,
+          "range": null,
+          "damage": "3d8+6",
+          "damageType": "bludgeoning",
+          "description": "HBDND5E.Content.Statblocks.reed_crowned_crocodile.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.reed_crowned_crocodile.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.reed_crowned_crocodile.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 38,
+          "rarity": "uncommon",
+          "img": "icons/commodities/materials/plant-branch-brown-green.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.reed_crowned_crocodile.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.reed_crowned_crocodile.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 60,
+          "rarity": "rare",
+          "img": "icons/commodities/leather/scales-green.webp"
+        }
+      ],
+      "encounter": {
+        "role": "ambusher",
+        "tier": 3,
+        "suggestedGroupSize": 3,
+        "environments": [
+          "HBDND5E.Content.Statblocks.reed_crowned_crocodile.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.reed_crowned_crocodile.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "lanternjaw-eel",
+      "monsterId": "lanternjaw-eel",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 2,
+      "size": "lg",
+      "creatureType": "beast",
+      "alignment": "unaligned",
+      "ac": 13,
+      "hp": {
+        "value": 52,
+        "formula": "8d10 + 8"
+      },
+      "abilities": {
+        "str": 15,
+        "dex": 17,
+        "con": 12,
+        "int": 2,
+        "wis": 14,
+        "cha": 6
+      },
+      "speed": {
+        "walk": 5,
+        "swim": 60
+      },
+      "senses": {
+        "darkvision": 120,
+        "blindsight": 20
+      },
+      "savingThrows": [
+        "dex"
+      ],
+      "skills": {
+        "prc": 1,
+        "ste": 2
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.lanternjaw_eel.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.lanternjaw_eel.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.lanternjaw_eel.actions.action_1.name",
+          "ability": "dex",
+          "attackType": "melee",
+          "reach": 10,
+          "range": null,
+          "damage": "2d8+3",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.lanternjaw_eel.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.lanternjaw_eel.actions.action_2.name",
+          "ability": "con",
+          "attackType": "melee",
+          "reach": 5,
+          "range": null,
+          "damage": "2d6+1",
+          "damageType": "lightning",
+          "description": "HBDND5E.Content.Statblocks.lanternjaw_eel.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.lanternjaw_eel.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.lanternjaw_eel.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 20,
+          "rarity": "uncommon",
+          "img": "icons/commodities/biological/organ-bladder-red.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.lanternjaw_eel.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.lanternjaw_eel.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 14,
+          "rarity": "uncommon",
+          "img": "icons/commodities/bones/bone-spine-grey.webp"
+        }
+      ],
+      "encounter": {
+        "role": "skirmisher",
+        "tier": 2,
+        "suggestedGroupSize": 3,
+        "environments": [
+          "HBDND5E.Content.Statblocks.lanternjaw_eel.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.lanternjaw_eel.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "bone-orchard-elk",
+      "monsterId": "bone-orchard-elk",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 10,
+      "size": "huge",
+      "creatureType": "fey",
+      "alignment": "unaligned",
+      "ac": 18,
+      "hp": {
+        "value": 178,
+        "formula": "17d12 + 68"
+      },
+      "abilities": {
+        "str": 21,
+        "dex": 14,
+        "con": 19,
+        "int": 11,
+        "wis": 18,
+        "cha": 16
+      },
+      "speed": {
+        "walk": 50
+      },
+      "senses": {
+        "darkvision": 60
+      },
+      "savingThrows": [
+        "str",
+        "wis",
+        "cha"
+      ],
+      "skills": {
+        "prc": 2,
+        "nat": 2,
+        "sur": 1
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.bone_orchard_elk.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.bone_orchard_elk.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.bone_orchard_elk.actions.action_1.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 15,
+          "range": null,
+          "damage": "3d12+5",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.bone_orchard_elk.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.bone_orchard_elk.actions.action_2.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 5,
+          "range": null,
+          "damage": "3d8+5",
+          "damageType": "bludgeoning",
+          "description": "HBDND5E.Content.Statblocks.bone_orchard_elk.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.bone_orchard_elk.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.bone_orchard_elk.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 160,
+          "rarity": "rare",
+          "img": "icons/consumables/mushrooms/cluster-red-brown.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.bone_orchard_elk.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.bone_orchard_elk.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 210,
+          "rarity": "veryRare",
+          "img": "icons/commodities/bones/horn-antler-pink-white.webp"
+        }
+      ],
+      "encounter": {
+        "role": "support-brute",
+        "tier": 4,
+        "suggestedGroupSize": 2,
+        "environments": [
+          "HBDND5E.Content.Statblocks.bone_orchard_elk.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.bone_orchard_elk.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "dustmantle-burrower",
+      "monsterId": "dustmantle-burrower",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 5,
+      "size": "lg",
+      "creatureType": "monstrosity",
+      "alignment": "unaligned",
+      "ac": 18,
+      "hp": {
+        "value": 102,
+        "formula": "12d10 + 36"
+      },
+      "abilities": {
+        "str": 20,
+        "dex": 10,
+        "con": 17,
+        "int": 3,
+        "wis": 15,
+        "cha": 5
+      },
+      "speed": {
+        "walk": 25,
+        "burrow": 35
+      },
+      "senses": {
+        "tremorsense": 60
+      },
+      "savingThrows": [
+        "str",
+        "con"
+      ],
+      "skills": {
+        "prc": 1,
+        "ste": 1
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.dustmantle_burrower.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.dustmantle_burrower.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.dustmantle_burrower.actions.action_1.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 10,
+          "range": null,
+          "damage": "2d10+5",
+          "damageType": "slashing",
+          "description": "HBDND5E.Content.Statblocks.dustmantle_burrower.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.dustmantle_burrower.actions.action_2.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 5,
+          "range": null,
+          "damage": "2d12+5",
+          "damageType": "bludgeoning",
+          "description": "HBDND5E.Content.Statblocks.dustmantle_burrower.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.dustmantle_burrower.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.dustmantle_burrower.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 70,
+          "rarity": "rare",
+          "img": "icons/commodities/leather/scale-chitin-grey.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.dustmantle_burrower.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.dustmantle_burrower.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 42,
+          "rarity": "rare",
+          "img": "icons/commodities/biological/organ-bladder-red.webp"
+        }
+      ],
+      "encounter": {
+        "role": "brute",
+        "tier": 3,
+        "suggestedGroupSize": 3,
+        "environments": [
+          "HBDND5E.Content.Statblocks.dustmantle_burrower.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.dustmantle_burrower.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "choirback-toad",
+      "monsterId": "choirback-toad",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 3,
+      "size": "huge",
+      "creatureType": "beast",
+      "alignment": "unaligned",
+      "ac": 14,
+      "hp": {
+        "value": 85,
+        "formula": "10d12 + 20"
+      },
+      "abilities": {
+        "str": 18,
+        "dex": 9,
+        "con": 15,
+        "int": 3,
+        "wis": 16,
+        "cha": 12
+      },
+      "speed": {
+        "walk": 20,
+        "swim": 30
+      },
+      "senses": {
+        "darkvision": 30
+      },
+      "savingThrows": [
+        "con",
+        "wis"
+      ],
+      "skills": {
+        "prc": 1,
+        "prf": 1
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.choirback_toad.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.choirback_toad.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.choirback_toad.actions.action_1.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 20,
+          "range": null,
+          "damage": "2d8+4",
+          "damageType": "bludgeoning",
+          "description": "HBDND5E.Content.Statblocks.choirback_toad.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.choirback_toad.actions.action_2.name",
+          "ability": "con",
+          "attackType": "ranged",
+          "reach": null,
+          "range": 30,
+          "damage": "2d10+2",
+          "damageType": "thunder",
+          "description": "HBDND5E.Content.Statblocks.choirback_toad.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.choirback_toad.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.choirback_toad.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 32,
+          "rarity": "uncommon",
+          "img": "icons/commodities/biological/organ-bladder-red.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.choirback_toad.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.choirback_toad.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 18,
+          "rarity": "uncommon",
+          "img": "icons/commodities/materials/slime-green.webp"
+        }
+      ],
+      "encounter": {
+        "role": "controller",
+        "tier": 2,
+        "suggestedGroupSize": 3,
+        "environments": [
+          "HBDND5E.Content.Statblocks.choirback_toad.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.choirback_toad.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "veinroot-colossus",
+      "monsterId": "veinroot-colossus",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 15,
+      "size": "grg",
+      "creatureType": "plant",
+      "alignment": "unaligned",
+      "ac": 20,
+      "hp": {
+        "value": 276,
+        "formula": "16d20 + 108"
+      },
+      "abilities": {
+        "str": 26,
+        "dex": 8,
+        "con": 24,
+        "int": 6,
+        "wis": 18,
+        "cha": 10
+      },
+      "speed": {
+        "walk": 30,
+        "burrow": 20
+      },
+      "senses": {
+        "tremorsense": 120
+      },
+      "savingThrows": [
+        "str",
+        "con",
+        "wis"
+      ],
+      "skills": {
+        "prc": 1,
+        "nat": 2
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.veinroot_colossus.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.veinroot_colossus.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.veinroot_colossus.actions.action_1.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 20,
+          "range": null,
+          "damage": "4d12+8",
+          "damageType": "bludgeoning",
+          "description": "HBDND5E.Content.Statblocks.veinroot_colossus.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.veinroot_colossus.actions.action_2.name",
+          "ability": "con",
+          "attackType": "ranged",
+          "reach": null,
+          "range": 60,
+          "damage": "4d10+7",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.veinroot_colossus.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.veinroot_colossus.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.veinroot_colossus.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 600,
+          "rarity": "veryRare",
+          "img": "icons/commodities/gems/gem-cluster-teal.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.veinroot_colossus.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.veinroot_colossus.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 450,
+          "rarity": "veryRare",
+          "img": "icons/commodities/wood/log-cut-petrified-violet.webp"
+        }
+      ],
+      "encounter": {
+        "role": "solo",
+        "tier": 5,
+        "suggestedGroupSize": 1,
+        "environments": [
+          "HBDND5E.Content.Statblocks.veinroot_colossus.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.veinroot_colossus.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "cinderwing-drake",
+      "monsterId": "cinderwing-drake",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 9,
+      "size": "lg",
+      "creatureType": "dragon",
+      "alignment": "unaligned",
+      "ac": 17,
+      "hp": {
+        "value": 147,
+        "formula": "14d10 + 70"
+      },
+      "abilities": {
+        "str": 20,
+        "dex": 17,
+        "con": 20,
+        "int": 7,
+        "wis": 15,
+        "cha": 10
+      },
+      "speed": {
+        "walk": 40,
+        "fly": 70
+      },
+      "senses": {
+        "darkvision": 90
+      },
+      "savingThrows": [
+        "dex",
+        "con",
+        "wis"
+      ],
+      "skills": {
+        "prc": 2,
+        "ste": 1
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.cinderwing_drake.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.cinderwing_drake.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.cinderwing_drake.actions.action_1.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 10,
+          "range": null,
+          "damage": "3d10+5",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.cinderwing_drake.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.cinderwing_drake.actions.action_2.name",
+          "ability": "dex",
+          "attackType": "ranged",
+          "reach": null,
+          "range": 60,
+          "damage": "3d8+3",
+          "damageType": "fire",
+          "description": "HBDND5E.Content.Statblocks.cinderwing_drake.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.cinderwing_drake.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.cinderwing_drake.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 150,
+          "rarity": "rare",
+          "img": "icons/commodities/biological/wing-lizard-yellow.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.cinderwing_drake.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.cinderwing_drake.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 95,
+          "rarity": "rare",
+          "img": "icons/commodities/leather/scales-brown.webp"
+        }
+      ],
+      "encounter": {
+        "role": "skirmisher",
+        "tier": 4,
+        "suggestedGroupSize": 2,
+        "environments": [
+          "HBDND5E.Content.Statblocks.cinderwing_drake.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.cinderwing_drake.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "whitewake-serpent",
+      "monsterId": "whitewake-serpent",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 14,
+      "size": "grg",
+      "creatureType": "monstrosity",
+      "alignment": "unaligned",
+      "ac": 19,
+      "hp": {
+        "value": 250,
+        "formula": "20d20 + 40"
+      },
+      "abilities": {
+        "str": 25,
+        "dex": 16,
+        "con": 19,
+        "int": 6,
+        "wis": 17,
+        "cha": 11
+      },
+      "speed": {
+        "swim": 100
+      },
+      "senses": {
+        "darkvision": 120,
+        "blindsight": 30
+      },
+      "savingThrows": [
+        "str",
+        "dex",
+        "wis"
+      ],
+      "skills": {
+        "prc": 2,
+        "ste": 1
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.whitewake_serpent.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.whitewake_serpent.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.whitewake_serpent.actions.action_1.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 15,
+          "range": null,
+          "damage": "4d12+7",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.whitewake_serpent.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.whitewake_serpent.actions.action_2.name",
+          "ability": "str",
+          "attackType": "melee",
+          "reach": 25,
+          "range": null,
+          "damage": "4d10+7",
+          "damageType": "bludgeoning",
+          "description": "HBDND5E.Content.Statblocks.whitewake_serpent.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.whitewake_serpent.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.whitewake_serpent.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 480,
+          "rarity": "veryRare",
+          "img": "icons/commodities/leather/scales-blue-white.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.whitewake_serpent.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.whitewake_serpent.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 320,
+          "rarity": "veryRare",
+          "img": "icons/commodities/biological/organ-bladder-red.webp"
+        }
+      ],
+      "encounter": {
+        "role": "solo",
+        "tier": 5,
+        "suggestedGroupSize": 1,
+        "environments": [
+          "HBDND5E.Content.Statblocks.whitewake_serpent.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.whitewake_serpent.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "coppercap-jackal",
+      "monsterId": "coppercap-jackal",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 2,
+      "size": "med",
+      "creatureType": "beast",
+      "alignment": "unaligned",
+      "ac": 14,
+      "hp": {
+        "value": 42,
+        "formula": "7d8 + 7"
+      },
+      "abilities": {
+        "str": 13,
+        "dex": 17,
+        "con": 12,
+        "int": 8,
+        "wis": 15,
+        "cha": 10
+      },
+      "speed": {
+        "walk": 45
+      },
+      "senses": {
+        "darkvision": 60
+      },
+      "savingThrows": [
+        "dex",
+        "wis"
+      ],
+      "skills": {
+        "prc": 1,
+        "ste": 1,
+        "sur": 1
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.coppercap_jackal.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.coppercap_jackal.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.coppercap_jackal.actions.action_1.name",
+          "ability": "dex",
+          "attackType": "melee",
+          "reach": 5,
+          "range": null,
+          "damage": "2d6+3",
+          "damageType": "piercing",
+          "description": "HBDND5E.Content.Statblocks.coppercap_jackal.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.coppercap_jackal.actions.action_2.name",
+          "ability": "con",
+          "attackType": "ranged",
+          "reach": null,
+          "range": 15,
+          "damage": "2d4+1",
+          "damageType": "poison",
+          "description": "HBDND5E.Content.Statblocks.coppercap_jackal.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.coppercap_jackal.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.coppercap_jackal.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 16,
+          "rarity": "uncommon",
+          "img": "icons/consumables/mushrooms/cluster-red-brown.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.coppercap_jackal.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.coppercap_jackal.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 9,
+          "rarity": "common",
+          "img": "icons/commodities/materials/liquid-orange.webp"
+        }
+      ],
+      "encounter": {
+        "role": "pack-support",
+        "tier": 2,
+        "suggestedGroupSize": 3,
+        "environments": [
+          "HBDND5E.Content.Statblocks.coppercap_jackal.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.coppercap_jackal.encounter.environments.2"
+        ]
+      }
+    },
+    {
+      "id": "mirrorhide-lynx",
+      "monsterId": "mirrorhide-lynx",
+      "providerId": "hunters-bestiary-dnd5e-2024",
+      "rules": "2024",
+      "cr": 10,
+      "size": "lg",
+      "creatureType": "fey",
+      "alignment": "unaligned",
+      "ac": 18,
+      "hp": {
+        "value": 170,
+        "formula": "20d10 + 60"
+      },
+      "abilities": {
+        "str": 19,
+        "dex": 22,
+        "con": 16,
+        "int": 10,
+        "wis": 18,
+        "cha": 15
+      },
+      "speed": {
+        "walk": 60,
+        "climb": 50
+      },
+      "senses": {
+        "darkvision": 90
+      },
+      "savingThrows": [
+        "dex",
+        "wis",
+        "cha"
+      ],
+      "skills": {
+        "prc": 2,
+        "ste": 2
+      },
+      "traits": [
+        {
+          "name": "HBDND5E.Content.Statblocks.mirrorhide_lynx.traits.1.name",
+          "description": "HBDND5E.Content.Statblocks.mirrorhide_lynx.traits.1.description"
+        }
+      ],
+      "actions": [
+        {
+          "id": "action-1",
+          "name": "HBDND5E.Content.Statblocks.mirrorhide_lynx.actions.action_1.name",
+          "ability": "dex",
+          "attackType": "melee",
+          "reach": 10,
+          "range": null,
+          "damage": "3d10+6",
+          "damageType": "slashing",
+          "description": "HBDND5E.Content.Statblocks.mirrorhide_lynx.actions.action_1.description"
+        },
+        {
+          "id": "action-2",
+          "name": "HBDND5E.Content.Statblocks.mirrorhide_lynx.actions.action_2.name",
+          "ability": "dex",
+          "attackType": "melee",
+          "reach": 15,
+          "range": null,
+          "damage": "3d8+6",
+          "damageType": "radiant",
+          "description": "HBDND5E.Content.Statblocks.mirrorhide_lynx.actions.action_2.description"
+        }
+      ],
+      "harvest": [
+        {
+          "name": "HBDND5E.Content.Statblocks.mirrorhide_lynx.harvest.1.name",
+          "description": "HBDND5E.Content.Statblocks.mirrorhide_lynx.harvest.1.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 220,
+          "rarity": "veryRare",
+          "img": "icons/commodities/leather/scales-white.webp"
+        },
+        {
+          "name": "HBDND5E.Content.Statblocks.mirrorhide_lynx.harvest.2.name",
+          "description": "HBDND5E.Content.Statblocks.mirrorhide_lynx.harvest.2.description",
+          "quantity": 1,
+          "weight": 1,
+          "priceGp": 145,
+          "rarity": "rare",
+          "img": "icons/commodities/leather/fur-blue.webp"
+        }
+      ],
+      "encounter": {
+        "role": "ambusher",
+        "tier": 4,
+        "suggestedGroupSize": 2,
+        "environments": [
+          "HBDND5E.Content.Statblocks.mirrorhide_lynx.encounter.environments.1",
+          "HBDND5E.Content.Statblocks.mirrorhide_lynx.encounter.environments.2"
+        ]
+      }
+    }
+  ]
+}

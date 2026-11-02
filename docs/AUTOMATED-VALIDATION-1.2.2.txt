@@ -1,0 +1,277 @@
+hunters-bestiary-dnd5e-2024 1.2.2 automated validation
+
+
+> hunters-bestiary-dnd5e-2024@1.2.2 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: D&D core adapters register once per core API instance
+ok 1 - D&D core adapters register once per core API instance
+  ---
+  duration_ms: 1.022186
+  type: 'test'
+  ...
+# Subtest: Actor builder emits a D&D 5e 2024 NPC with usable embedded activities
+ok 2 - Actor builder emits a D&D 5e 2024 NPC with usable embedded activities
+  ---
+  duration_ms: 2.129965
+  type: 'test'
+  ...
+# Subtest: harvest builder emits priced D&D loot Items
+ok 3 - harvest builder emits priced D&D loot Items
+  ---
+  duration_ms: 0.565093
+  type: 'test'
+  ...
+# Subtest: encounter profiles expose CR, XP, role, and count
+ok 4 - encounter profiles expose CR, XP, role, and count
+  ---
+  duration_ms: 0.185428
+  type: 'test'
+  ...
+# Subtest: every bundled harvest Item uses an existing, semantically selected Foundry core icon path
+ok 5 - every bundled harvest Item uses an existing, semantically selected Foundry core icon path
+  ---
+  duration_ms: 4.399646
+  type: 'test'
+  ...
+# Subtest: Foundry loads one root-level runtime bundle
+ok 6 - Foundry loads one root-level runtime bundle
+  ---
+  duration_ms: 1.389422
+  type: 'test'
+  ...
+# Subtest: runtime bundle contains settings, API, dashboard, and resource workflows
+ok 7 - runtime bundle contains settings, API, dashboard, and resource workflows
+  ---
+  duration_ms: 0.275415
+  type: 'test'
+  ...
+# Subtest: ApplicationV2 position defaults contain only supported geometry fields
+ok 8 - ApplicationV2 position defaults contain only supported geometry fields
+  ---
+  duration_ms: 1.040273
+  type: 'test'
+  ...
+# Subtest: minimum dashboard geometry remains enforced outside ApplicationPosition
+ok 9 - minimum dashboard geometry remains enforced outside ApplicationPosition
+  ---
+  duration_ms: 0.248545
+  type: 'test'
+  ...
+# Subtest: dashboard exposes separated repair and strict deletion workflows
+ok 10 - dashboard exposes separated repair and strict deletion workflows
+  ---
+  duration_ms: 1.040402
+  type: 'test'
+  ...
+# Subtest: Foundry v13 entrypoint imports against ApplicationV2
+ok 11 - Foundry v13 entrypoint imports against ApplicationV2
+  ---
+  duration_ms: 6.989715
+  type: 'test'
+  ...
+# Subtest: official system layer registers canonical naming metadata and validates on dashboard open
+ok 12 - official system layer registers canonical naming metadata and validates on dashboard open
+  ---
+  duration_ms: 0.915724
+  type: 'test'
+  ...
+# hunters-bestiary-dnd5e-2024 | Bulk harvest Item operation failed; retrying individually Error: Bulk operation unavailable.
+#     at executeBatchWithFallback (file://scripts/harvest-import.mjs:97:22)
+#     at importOrUpdateHarvestItemsBatch (file://scripts/harvest-import.mjs:75:9)
+# Subtest: harvest import updates existing managed Items and creates only missing Items
+ok 13 - harvest import updates existing managed Items and creates only missing Items
+  ---
+  duration_ms: 2.029837
+  type: 'test'
+  ...
+# Subtest: harvest import batches multiple managed updates and creates
+ok 14 - harvest import batches multiple managed updates and creates
+  ---
+  duration_ms: 0.476681
+  type: 'test'
+  ...
+# Subtest: D&D dashboard delegates image changes to the core image service
+ok 15 - D&D dashboard delegates image changes to the core image service
+  ---
+  duration_ms: 4.039723
+  type: 'test'
+  ...
+# Subtest: dashboard exposes one primary import-everything action
+ok 16 - dashboard exposes one primary import-everything action
+  ---
+  duration_ms: 5.345849
+  type: 'test'
+  ...
+# Subtest: D&D integration owns no sheet, HUD, Chat, Scene Control, or canvas render hooks
+ok 17 - D&D integration owns no sheet, HUD, Chat, Scene Control, or canvas render hooks
+  ---
+  duration_ms: 6.620242
+  type: 'test'
+  ...
+# Subtest: D&D integration CSS is scoped to module-owned roots and prefixes
+ok 18 - D&D integration CSS is scoped to module-owned roots and prefixes
+  ---
+  duration_ms: 2.911372
+  type: 'test'
+  ...
+# Subtest: manifest uses Foundry's standard modular localization declarations
+ok 19 - manifest uses Foundry's standard modular localization declarations
+  ---
+  duration_ms: 1.28415
+  type: 'test'
+  ...
+# Subtest: shipped data uses localization keys and contains no embedded language maps
+ok 20 - shipped data uses localization keys and contains no embedded language maps
+  ---
+  duration_ms: 5.718436
+  type: 'test'
+  ...
+# Subtest: localization delegates to Foundry's active game.i18n service
+ok 21 - localization delegates to Foundry's active game.i18n service
+  ---
+  duration_ms: 0.344006
+  type: 'test'
+  ...
+# Subtest: production has no custom language selector or translation-dictionary injection
+ok 22 - production has no custom language selector or translation-dictionary injection
+  ---
+  duration_ms: 6.423737
+  type: 'test'
+  ...
+# Subtest: managed resource predicates require exact dual provenance
+ok 23 - managed resource predicates require exact dual provenance
+  ---
+  duration_ms: 0.779869
+  type: 'test'
+  ...
+# Subtest: legacy managed Actors move into an existing canonical folder without touching user Actors
+ok 24 - legacy managed Actors move into an existing canonical folder without touching user Actors
+  ---
+  duration_ms: 0.791733
+  type: 'test'
+  ...
+# Subtest: a purely managed legacy folder is renamed in place when no canonical folder exists
+ok 25 - a purely managed legacy folder is renamed in place when no canonical folder exists
+  ---
+  duration_ms: 0.460947
+  type: 'test'
+  ...
+# Subtest: delete imported data removes only exact managed resources and unlinks matching Actors
+ok 26 - delete imported data removes only exact managed resources and unlinks matching Actors
+  ---
+  duration_ms: 1.150584
+  type: 'test'
+  ...
+# Subtest: successful progress windows are foregrounded and closed automatically
+ok 27 - successful progress windows are foregrounded and closed automatically
+  ---
+  duration_ms: 2.178109
+  type: 'test'
+  ...
+# Subtest: failed progress windows remain visible until their dashboard closes
+ok 28 - failed progress windows remain visible until their dashboard closes
+  ---
+  duration_ms: 0.761179
+  type: 'test'
+  ...
+# Subtest: closing the dashboard closes any owned progress windows
+ok 29 - closing the dashboard closes any owned progress windows
+  ---
+  duration_ms: 6.049926
+  type: 'test'
+  ...
+# Subtest: partial result failures keep the progress window open
+ok 30 - partial result failures keep the progress window open
+  ---
+  duration_ms: 0.452704
+  type: 'test'
+  ...
+# Subtest: public registry contract defines the supported validation and registration signatures
+ok 31 - public registry contract defines the supported validation and registration signatures
+  ---
+  duration_ms: 2.133659
+  type: 'test'
+  ...
+# Subtest: invalid third-party records retain useful structured diagnostics
+ok 32 - invalid third-party records retain useful structured diagnostics
+  ---
+  duration_ms: 1.028352
+  type: 'test'
+  ...
+# Subtest: provider registration is idempotent and replacement removes stale records
+ok 33 - provider registration is idempotent and replacement removes stale records
+  ---
+  duration_ms: 2.01934
+  type: 'test'
+  ...
+# Subtest: a rejected replacement leaves the previous provider records intact
+ok 34 - a rejected replacement leaves the previous provider records intact
+  ---
+  duration_ms: 0.676531
+  type: 'test'
+  ...
+# hunters-bestiary-dnd5e-2024 | Initialized.
+# Subtest: bundled init hook always registers global settings and exposes the API
+ok 35 - bundled init hook always registers global settings and exposes the API
+  ---
+  duration_ms: 5.65956
+  type: 'test'
+  ...
+# Subtest: D&D integration settings register once
+ok 36 - D&D integration settings register once
+  ---
+  duration_ms: 0.754684
+  type: 'test'
+  ...
+# Subtest: bundled stat blocks form a complete 24-monster library
+ok 37 - bundled stat blocks form a complete 24-monster library
+  ---
+  duration_ms: 3.067926
+  type: 'test'
+  ...
+# Subtest: every record has playable actions and harvest Items
+ok 38 - every record has playable actions and harvest Items
+  ---
+  duration_ms: 0.389575
+  type: 'test'
+  ...
+# Subtest: incomplete third-party records are rejected unless explicitly allowed
+ok 39 - incomplete third-party records are rejected unless explicitly allowed
+  ---
+  duration_ms: 0.456802
+  type: 'test'
+  ...
+# Subtest: provider replacement removes stale stat blocks
+ok 40 - provider replacement removes stale stat blocks
+  ---
+  duration_ms: 0.240917
+  type: 'test'
+  ...
+1..40
+# tests 40
+# suites 0
+# pass 40
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 308.23088
+
+
+> hunters-bestiary-dnd5e-2024@1.2.2 check
+> node tools/check.mjs
+
+D&D 5e integration validation passed (11 groups):
+- manifest, dependencies, and referenced files
+- 24 complete stat blocks, actions, harvest records, and encounter roles
+- harvest Item icon mapping and legacy-path rejection
+- single-file bundled runtime entry and settings bootstrap
+- 13 script files syntax-checked
+- deprecated V1 API scan
+- UI ownership, native DOM, Chat, Scene Controls, and canvas isolation audit
+- all production relative imports resolve
+- stylesheet isolation audit
+- 402 modular localization keys and references
+- 11 dashboard actions mapped

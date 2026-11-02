@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Hunter's Bestiary D&D 5e 2024">
+  <rect width="512" height="512" rx="84" fill="#171717"/>
+  <path d="M89 92h145c38 0 69 31 69 69v260c-17-20-41-30-72-30H89z" fill="#352a20" stroke="#d3a85f" stroke-width="18"/>
+  <path d="M423 92H278c-38 0-69 31-69 69v260c17-20 41-30 72-30h142z" fill="#2a2420" stroke="#d3a85f" stroke-width="18"/>
+  <path d="M256 145c-28 0-52 20-58 47 33-20 63-10 78 7-8-30-4-54 16-73-12 4-24 10-36 19z" fill="#d3a85f"/>
+  <path d="M178 231c31-16 61-10 78 14 17-24 47-30 78-14-4 62-29 104-78 137-49-33-74-75-78-137z" fill="#8e382e" stroke="#f2eadb" stroke-width="10"/>
+  <text x="256" y="318" text-anchor="middle" font-family="serif" font-size="122" font-weight="700" fill="#f2eadb">5e</text>
+</svg>

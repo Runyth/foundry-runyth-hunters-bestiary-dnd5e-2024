@@ -1,0 +1,12 @@
+Hunter's Bestiary - D&D 5e 2024 1.1.2 automated validation
+
+PASS: 18/18 Node test cases
+PASS: 9 validation groups
+PASS: 70/70 English/German localization-key parity
+PASS: JavaScript syntax checks
+PASS: manifest path and dependency validation
+PASS: production import resolution
+PASS: scoped CSS and broad-hook/interference checks
+PASS: deterministic ZIP packaging configuration
+
+Live Foundry VTT client testing was not performed in the build environment.

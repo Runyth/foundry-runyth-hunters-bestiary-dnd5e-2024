@@ -1,0 +1,63 @@
+{
+  "id": "hunters-bestiary-dnd5e-2024",
+  "title": "Hunter's Bestiary - D&D 5e 2024",
+  "description": "D&D 5e 2024 system integration for Hunter's Bestiary: original NPC Actors, native D20 field checks, harvest Items, encounter profiles, and an API for complementary D&D monster packs.",
+  "version": "1.2.2",
+  "authors": [
+    {
+      "name": "Runyth"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13.341",
+    "verified": "13.351",
+    "maximum": "13.351"
+  },
+  "relationships": {
+    "requires": [
+      {
+        "id": "hunters-bestiary",
+        "type": "module",
+        "compatibility": {
+          "minimum": "1.4.2"
+        }
+      },
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "5.3.3",
+          "verified": "5.3.3",
+          "maximum": "5.3.3"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "main.mjs"
+  ],
+  "styles": [
+    "styles/hunters-bestiary-dnd5e.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    }
+  ],
+  "readme": "README.md",
+  "changelog": "CHANGELOG.md",
+  "license": "LICENSE",
+  "media": [
+    {
+      "type": "icon",
+      "url": "assets/hunters-bestiary-dnd5e.svg"
+    }
+  ]
+}

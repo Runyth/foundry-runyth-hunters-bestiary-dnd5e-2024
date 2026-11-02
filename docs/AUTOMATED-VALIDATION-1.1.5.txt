@@ -1,0 +1,200 @@
+# Automated Validation — 1.1.5
+
+## npm test
+```text
+
+> hunters-bestiary-dnd5e-2024@1.1.5 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: D&D core adapters register once per core API instance
+ok 1 - D&D core adapters register once per core API instance
+  ---
+  duration_ms: 0.929312
+  type: 'test'
+  ...
+# Subtest: Actor builder emits a D&D 5e 2024 NPC with usable embedded activities
+ok 2 - Actor builder emits a D&D 5e 2024 NPC with usable embedded activities
+  ---
+  duration_ms: 1.623315
+  type: 'test'
+  ...
+# Subtest: harvest builder emits priced D&D loot Items
+ok 3 - harvest builder emits priced D&D loot Items
+  ---
+  duration_ms: 0.292385
+  type: 'test'
+  ...
+# Subtest: encounter profiles expose CR, XP, role, and count
+ok 4 - encounter profiles expose CR, XP, role, and count
+  ---
+  duration_ms: 0.183213
+  type: 'test'
+  ...
+# Subtest: every bundled harvest Item uses an existing, semantically selected Foundry core icon path
+ok 5 - every bundled harvest Item uses an existing, semantically selected Foundry core icon path
+  ---
+  duration_ms: 4.052399
+  type: 'test'
+  ...
+# Subtest: ApplicationV2 position defaults contain only supported geometry fields
+ok 6 - ApplicationV2 position defaults contain only supported geometry fields
+  ---
+  duration_ms: 1.07548
+  type: 'test'
+  ...
+# Subtest: minimum dashboard geometry remains enforced outside ApplicationPosition
+ok 7 - minimum dashboard geometry remains enforced outside ApplicationPosition
+  ---
+  duration_ms: 0.216092
+  type: 'test'
+  ...
+# Subtest: dashboard exposes separated repair and strict deletion workflows
+ok 8 - dashboard exposes separated repair and strict deletion workflows
+  ---
+  duration_ms: 0.579962
+  type: 'test'
+  ...
+# Subtest: Foundry v13 entrypoint imports against ApplicationV2
+ok 9 - Foundry v13 entrypoint imports against ApplicationV2
+  ---
+  duration_ms: 11.616291
+  type: 'test'
+  ...
+# Subtest: official system layer registers canonical naming metadata and validates on dashboard open
+ok 10 - official system layer registers canonical naming metadata and validates on dashboard open
+  ---
+  duration_ms: 0.435017
+  type: 'test'
+  ...
+# Subtest: harvest import updates existing managed Items and creates only missing Items
+ok 11 - harvest import updates existing managed Items and creates only missing Items
+  ---
+  duration_ms: 1.248447
+  type: 'test'
+  ...
+# Subtest: dashboard exposes one primary import-everything action
+ok 12 - dashboard exposes one primary import-everything action
+  ---
+  duration_ms: 5.540712
+  type: 'test'
+  ...
+# Subtest: D&D integration owns no sheet, HUD, Chat, Scene Control, or canvas render hooks
+ok 13 - D&D integration owns no sheet, HUD, Chat, Scene Control, or canvas render hooks
+  ---
+  duration_ms: 6.249376
+  type: 'test'
+  ...
+# Subtest: D&D integration CSS is scoped to module-owned roots and prefixes
+ok 14 - D&D integration CSS is scoped to module-owned roots and prefixes
+  ---
+  duration_ms: 1.759798
+  type: 'test'
+  ...
+# Subtest: managed resource predicates require exact dual provenance
+ok 15 - managed resource predicates require exact dual provenance
+  ---
+  duration_ms: 0.739971
+  type: 'test'
+  ...
+# Subtest: legacy managed Actors move into an existing canonical folder without touching user Actors
+ok 16 - legacy managed Actors move into an existing canonical folder without touching user Actors
+  ---
+  duration_ms: 0.617409
+  type: 'test'
+  ...
+# Subtest: a purely managed legacy folder is renamed in place when no canonical folder exists
+ok 17 - a purely managed legacy folder is renamed in place when no canonical folder exists
+  ---
+  duration_ms: 0.292715
+  type: 'test'
+  ...
+# Subtest: delete imported data removes only exact managed resources and unlinks matching Actors
+ok 18 - delete imported data removes only exact managed resources and unlinks matching Actors
+  ---
+  duration_ms: 0.88726
+  type: 'test'
+  ...
+# Subtest: successful progress windows are foregrounded and closed automatically
+ok 19 - successful progress windows are foregrounded and closed automatically
+  ---
+  duration_ms: 1.504288
+  type: 'test'
+  ...
+# Subtest: failed progress windows remain visible until their dashboard closes
+ok 20 - failed progress windows remain visible until their dashboard closes
+  ---
+  duration_ms: 0.574434
+  type: 'test'
+  ...
+# Subtest: closing the dashboard closes any owned progress windows
+ok 21 - closing the dashboard closes any owned progress windows
+  ---
+  duration_ms: 5.389032
+  type: 'test'
+  ...
+# Subtest: partial result failures keep the progress window open
+ok 22 - partial result failures keep the progress window open
+  ---
+  duration_ms: 0.307538
+  type: 'test'
+  ...
+# Subtest: D&D integration settings register once
+ok 23 - D&D integration settings register once
+  ---
+  duration_ms: 1.013177
+  type: 'test'
+  ...
+# Subtest: bundled stat blocks form a complete 24-monster library
+ok 24 - bundled stat blocks form a complete 24-monster library
+  ---
+  duration_ms: 2.069519
+  type: 'test'
+  ...
+# Subtest: every record has playable actions and harvest Items
+ok 25 - every record has playable actions and harvest Items
+  ---
+  duration_ms: 1.098704
+  type: 'test'
+  ...
+# Subtest: incomplete third-party records are rejected unless explicitly allowed
+ok 26 - incomplete third-party records are rejected unless explicitly allowed
+  ---
+  duration_ms: 0.421978
+  type: 'test'
+  ...
+# Subtest: provider replacement removes stale stat blocks
+ok 27 - provider replacement removes stale stat blocks
+  ---
+  duration_ms: 0.224954
+  type: 'test'
+  ...
+1..27
+# tests 27
+# suites 0
+# pass 27
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 199.135309
+```
+
+## npm run check
+```text
+
+> hunters-bestiary-dnd5e-2024@1.1.5 check
+> node tools/check.mjs
+
+D&D 5e integration validation passed (10 groups):
+- manifest, dependencies, and referenced files
+- 24 complete stat blocks, actions, harvest records, and encounter roles
+- harvest Item icon mapping and legacy-path rejection
+- 13 script files syntax-checked
+- deprecated V1 API scan
+- UI ownership, native DOM, Chat, Scene Controls, and canvas isolation audit
+- all production relative imports resolve
+- stylesheet isolation audit
+- 90 bilingual localization keys and references
+- 10 dashboard actions mapped
+```
