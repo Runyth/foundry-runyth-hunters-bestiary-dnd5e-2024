@@ -2,7 +2,7 @@
 // Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 export const MODULE_ID = "runyth-hunters-bestiary-dnd5e-2024";
 export const MODULE_TITLE = "Runyth Hunter's Bestiary - D&D 5e 2024";
-export const MODULE_VERSION = "1.2.4";
+export const MODULE_VERSION = "1.2.5";
 export const CORE_MODULE_ID = "runyth-hunters-bestiary";
 export const SYSTEM_ID = "dnd5e";
 export const ADAPTER_ID = MODULE_ID;
