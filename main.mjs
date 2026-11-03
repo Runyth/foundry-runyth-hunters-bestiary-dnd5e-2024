@@ -10,7 +10,7 @@ __hbModules["scripts/constants.mjs"] = (() => {
   // Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
   const MODULE_ID = "runyth-hunters-bestiary-dnd5e-2024";
   const MODULE_TITLE = "Runyth Hunter's Bestiary - D&D 5e 2024";
-  const MODULE_VERSION = "1.2.4";
+  const MODULE_VERSION = "1.2.5";
   const CORE_MODULE_ID = "runyth-hunters-bestiary";
   const SYSTEM_ID = "dnd5e";
   const ADAPTER_ID = MODULE_ID;
