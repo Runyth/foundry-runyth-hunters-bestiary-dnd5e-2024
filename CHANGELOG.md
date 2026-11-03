@@ -1,18 +1,14 @@
-## 1.2.5 - 2026-11-03
+# Changelog
 
-### Fixed and improved
+## 1.2.5 — 2026-11-03
 
 - AGENTS.md conformance release: the manifest author carries the standard organisational URL, and the shipped homebrew content states its CC BY-SA 4.0 content licence in the README and on the content data records. No runtime behaviour relationship or dependency change.
 
 ## 1.2.4 — 2026-11-02
 
-### Fixed and improved
-
 - The manifest description and the bundle icon label carry the family-prefixed name, and a publication guard pins that every family-name occurrence in README, changelog, data, docs, and program files is prefixed with the Runyth family, including the curly and plural legacy forms. No runtime behaviour, relationship, or dependency change; the release moves a patch for the naming alignment completion.
 
 ## 1.2.3 — 2026-11-02
-
-### Fixed and improved
 
 - The family name in the release notes, build report, and documentation prose uses the standard ASCII apostrophe and the Runyth family prefix consistently (`Runyth Hunter's Bestiary - D&D 5e 2024`), replacing legacy curly and plural forms. No runtime, manifest relationship, or dependency change; the release moves a patch for the publication-surface naming alignment.
 
@@ -34,8 +30,6 @@
 - Removed custom translation loading/injection and language-specific runtime branches.
 - Added future-language authoring documentation and regression coverage.
 - Preserved the coordinated actor-image feature set and all stable IDs and settings.
-
-# Changelog
 
 ## 1.2.0
 
@@ -72,8 +66,7 @@
 - Preserved and surfaced per-resource failure details for manual review.
 - Adopted the core 1.3.3 fixed-width shared progress dialog.
 
-
-## 1.1.3 - 2026-07-31
+## 1.1.3 — 2026-07-31
 
 - Reconciled legacy and canonical managed Actor/Item folders without name-only ownership inference.
 - Added automatic and manual imported-folder repair.
@@ -81,7 +74,7 @@
 - Added guarded core Actor unlinking and empty managed-folder cleanup.
 - Added English/German UI, confirmation, progress, and result text.
 
-## 1.1.2 - 2026-07-31
+## 1.1.2 — 2026-07-31
 
 - Kept import and update progress windows in front of their owning dashboard while operations are active.
 - Automatically closed completed progress windows after the final notification and summary were emitted.
@@ -89,7 +82,7 @@
 - Preserved the shared Runyth Hunter's Bestiary progress implementation, operation counts, busy states, and error reporting.
 - Added regression coverage for progress-window ownership, foregrounding, and cleanup.
 
-## 1.1.1 - 2026-07-31
+## 1.1.1 — 2026-07-31
 
 - Fixed the global-settings Open Dashboard action on Foundry v13.
 - Removed unsupported `minWidth` and `minHeight` keys from ApplicationV2 position defaults.
@@ -97,14 +90,12 @@
 - Added a regression test that prevents non-position keys from entering ApplicationV2 position defaults.
 - Updated the core dependency to Runyth Hunter's Bestiary 1.3.1.
 
-
 - Normalized the canonical family title and coordinated dependency versions across all four official modules.
 - Added/consumed the core naming API with structured validation, registrations, startup warning deduplication, and dashboard-open warnings.
 - Added/consumed the shared dashboard toolkit for ApplicationV2 geometry, reset controls, stable search, progress, busy states, operation reporting, and safe destructive confirmations.
 - Preserved stable module IDs, existing settings and flags, imported content identities, provider IDs, and documented compatibility aliases.
 - Added complete English/German localization parity, developer guidance, migration documentation, tests, and release qualification artifacts.
 - Retained this module's high-contrast d&d integration palette and module-specific functionality.
-
 
 ## 1.0.1 — 2026-07-29
 
