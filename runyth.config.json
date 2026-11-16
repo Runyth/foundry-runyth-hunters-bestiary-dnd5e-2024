@@ -50,6 +50,11 @@
       "**/Thumbs.db"
     ]
   },
+  "format": {
+    "exclude": [
+      "main.mjs"
+    ]
+  },
   "module": {
     "kind": "runtime",
     "publicApi": true,
